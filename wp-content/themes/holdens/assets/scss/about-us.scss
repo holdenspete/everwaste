@@ -1,0 +1,215 @@
+@import 'common';
+
+.hero {
+    .container {
+        min-height: 90svh;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        @media (min-width: 640px) {
+            align-items: center;
+            justify-content: space-between;
+        }
+        @media (min-width: 768px) {
+            max-height: calc(100svh - 88px);
+            min-height: auto;
+        }
+        .text {
+            @media (min-width: 640px) {
+                flex: 0 1 calc(50% - 1rem);
+            }
+            @media (max-width: 639px) {
+                max-width: 270px;
+            }
+
+        }
+        .images {
+            @media (min-width: 640px) {
+                flex: 0 1 calc(50% - 1rem);
+            }
+            
+        }
+        .down {
+            @media (min-width: 640px) {
+                width: 40px;
+                height: 40px;
+            }
+            @media (min-width: $large) {
+                width: 44px;
+                height: 44px;
+                &:hover {
+
+                    svg {
+                        circle {
+                            &:first-of-type {
+                                fill: $greenCard;
+                            }
+                        }
+                    }
+                }
+            }
+            svg {
+                circle {
+                    &:first-of-type {
+                        @media (min-width: $large) {
+                            transition: .3s ease;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.communityGradient {
+    background: linear-gradient(180deg, #102210 0%, #3C553C 71.62%, #688868 100%);
+    position: relative;
+    z-index: 3;
+    .textImage {
+        .container {
+            .text {
+                .inner {
+                    p {
+                        @media (min-width: $large) {
+                            max-width: 100%;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.squad {
+    background-color: $white;
+    margin-top: -3rem;
+    padding-top: 3rem;
+    position: relative;
+    z-index: 2;
+    .container {
+        .titleWrapper {
+            margin-top: 4rem;
+            margin-bottom: 3rem;                
+            @media (min-width: $tablet) {
+                margin-bottom: 4rem;                
+                margin-top: 6rem;                
+            }
+            h4 {    
+                color: $pink;
+            }
+            h2 {    
+                color: $black;
+            }
+        }
+        .teamGrid {
+            display: grid;
+            gap: 1rem;
+            padding-bottom: 3rem;
+            @media (min-width: $tablet) {
+                padding-bottom: 6rem;
+            }
+            @media (min-width: $large) {
+                gap: 2rem;
+            }
+            .gridItem {
+                gap: 1rem;
+                display: grid;
+                @media (min-width: $large) {
+                    gap: 2rem;
+                    opacity: 0;
+                    transition: .3s ease;
+                    transform: translateY(50px);
+                    &.active {
+                        transform: translateY(0);
+                        opacity: 1;
+                    }
+                }
+                @media (min-width: $tablet) {
+                    grid-template-columns: 1fr 1fr;
+                }
+                &:nth-of-type(even) {
+                    @media (min-width: $tablet) {
+                        direction: rtl;
+                        text-align: left;
+                    }
+                    .text {
+                        background-color: #FFFFFF;
+
+                    }
+                }
+                .text {
+                    display: flex;
+                    border-radius: 30px;
+                    justify-content: center;
+                    flex-direction: column;
+                    padding: 2rem 1.5rem;
+                    background-color: #F3F3F3;
+                    filter: drop-shadow(4px 4px 20px rgba(16, 34, 16, 0.10));
+                    @media (max-width: 500px) {
+                        height: auto;
+                    }
+                    @media (min-width: $tablet) {
+                        padding: 3rem 2rem;   
+                        height: 100%;
+                        max-height: 100%;
+                    }
+                    @media (min-width: $large) {
+                        padding: 4rem 3rem;                        
+                    }
+                    .inner {
+                        @media (min-width: $large) {
+                            max-width: 540px;
+                            margin-left: auto;                      
+                            width: 100%;
+                            margin-right: auto;                      
+                        }
+                        h5 {
+                            font-size: inherit;
+                            color: $black;
+                            margin-bottom: 2rem;
+                            margin-top: 2rem;
+                            text-transform: none;
+                            font-weight: 500;
+                            font-family: $font-primary;
+                        }
+                        ul {
+                            padding-left: 1rem;
+                            line-height: inherit;
+                            margin-bottom: 2rem;
+                        }
+                    }
+                    h4, p, ul {
+                        color: $black;
+                    }
+                    h2, h3, h4, h5, h6, p, ul {
+                        direction: ltr;
+                    }
+                    p {
+                        &:last-of-type {
+                            margin-bottom: 0;
+                        }
+                    }
+                    h3 {
+                        color: $pink;
+                        font-size: clamp(30px, 3vw, 52px);
+                    }
+                    h4 {
+                        font-size: clamp(14px, 1.9vw, 26px);
+                    }
+                }
+                .image {
+                    border-radius: 30px;
+                    filter: drop-shadow(4px 4px 20px rgba(16, 34, 16, 0.10));
+                    overflow: hidden;
+                    @media (min-width: $tablet) {
+                        height: 100%;
+                        width: 100%;
+                    }
+                    img {
+                        height: 100%;
+                        width: 100%;
+                        object-fit: cover;
+                    }
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,288 @@
+@import 'common';
+
+.introGradient {
+    background: linear-gradient(180deg, #102210 0%, #EDEDED 10%, #EDEDED 100%);
+    position: relative;
+    z-index: 3;
+    overflow: visible;
+    @media (min-width: 640px) {
+        background: linear-gradient(180deg, #102210 0%, #EDEDED 22%, #EDEDED 100%);        
+    }
+}
+.textImage {
+    @media (min-width: $large) {
+        opacity: 0;
+        transition: .3s ease;
+        transform: translateY(50px);
+        &.active {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }    
+
+    &:not(:last-of-type) {
+        @media (min-width: $large) {
+            margin-bottom: 3rem;
+        }
+    }
+    .container {
+        .text {
+            .inner {
+                ul {
+                    @include twentyFour();
+                    padding-left: 1.5rem;
+                }
+                p {
+                    @media (min-width: $large) {
+                        max-width: 100%;
+                    }
+                }
+            }
+        }
+    }
+}
+.pricing {
+    margin-top: 6rem;
+    @media (min-width: $large) {
+        margin-top: 9rem;
+    }
+    .container {
+        .inner {
+            border-radius: 30px;
+            background: linear-gradient(180deg, #C4729E 0%, #F58FC6 100%);
+            padding: 2rem 1rem;
+            text-align: center;
+            @media (min-width: $tablet) {
+                padding: 3rem 2rem;
+            }
+            @media (min-width: $large) {
+                padding: 5rem 4rem;
+            }
+             @media (min-width: $large) {
+                opacity: 0;
+                transition: .3s ease;
+                transform: translateY(50px);
+                &.active {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            } 
+            h2 {
+                margin-top: 0;
+            }
+            .pricing-list {
+                .pricing-item {
+                    &:not(:last-of-type) {
+                        margin-bottom: 4rem;
+                        position: relative;
+                        &:after {
+                            content: "";
+                            position: absolute;
+                            width: 100%;
+                            height: 1px;
+                            background: rgba(12, 7, 10, 0.30);
+                            bottom: -2rem;
+                            left: 0;
+                            right: 0;
+                            margin: auto;
+                            max-width: 600px;
+                        }
+                    }
+                    .price-amount {
+                        font-family: $font-secondary;
+                        font-size: clamp(22px, 2.75vw, 42px);
+                        margin-bottom: 1rem;
+                    }
+                    .price-title {
+                        h5 {
+                            font-family: $font-primary;
+                            @include twentyFour();
+                            text-transform: none;
+                            font-weight: 600;
+                            margin-bottom: 1rem!important;
+                        }
+                    }
+                    .price-description {
+                        p {
+                            @include twentyFour();
+
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+.hero.justText.withSmall {
+    .container {
+        @media (min-width: $large) {
+            align-items: flex-start;
+        }
+        .retreat-dates {
+            width: 100%;
+            margin: -1rem 0 2rem;
+            font-weight: 600;
+            p {
+                @include twentyFour();
+            }
+            @media (min-width: 640px) {
+                position: absolute;
+                width: 50%;
+                right: auto;
+                left: calc(50% + 1rem);
+            }
+            @media (min-width: $tablet) {
+                transform: translateY(.5rem);
+            }
+            @media (min-width: $large) {
+                transform: translateY(1.5rem);
+                left: calc(50% - 1rem);
+            }
+            @media (min-width: $xxlarge) {
+                transform: translateY(2.5rem);
+                width: auto;
+                left: auto;
+                right: 2rem;
+                
+            }
+        }
+        .description {
+            @media (min-width: 640px) {
+                margin-top: 4rem;
+            }
+            @media (min-width: $large) {
+                max-width: 100%;
+                margin-top: 11vw;
+                max-width: 500px;
+                margin-left: 0;
+                margin-right: auto;
+            }        
+            @media (min-width: $xxlarge) {
+                margin-top: 12vw;
+                margin-right: 0;
+                margin-left: auto;                
+            }
+        }
+    }
+}
+
+.faqWrapper {
+    padding-bottom: 5rem;
+    margin-top: 6rem;
+    @media (min-width: $tablet) {
+        margin-top: 9rem;
+    }
+    @media (min-width: $large) {
+        margin-top: 12rem;
+    }
+    .container {
+        .titleWrapper {
+            h3 {
+                color: #C4729E;
+                margin: 0 0 1rem;
+                font-size: clamp(15px, 2.25vw, 39px);
+            }
+            h2 {
+                margin-top: 1rem;
+                font-size: clamp(28px, 4.3vw, 72px);
+                color: $black;
+            }
+        }
+        .faq-accordion {
+            @media (min-width: $tablet) {
+                max-width: 85%;              
+            }
+            @media (min-width: $large) {
+                max-width: 80%;              
+                margin-left: auto;
+                margin-right: auto;
+            }
+            @media (min-width: $xlarge) {
+                max-width: 1040px;
+                margin-right: 2rem;
+            }
+            @media (min-width: $xxlarge) {
+                margin-top: -6.5rem;
+            }
+            @media (min-width: $large) {
+                opacity: 0;
+                transition: .3s ease;
+                transform: translateY(50px);
+                &.active {
+                    transform: translateY(0);
+                    opacity: 1;
+                }
+            } 
+        }
+    }
+}
+.faq-item {
+    background: $white;
+    margin-bottom: 1rem;
+    border-radius: 30px;
+    overflow: hidden;
+    
+    .faq-question {
+        width: 100%;
+        text-align: left;
+        border: none;
+        background: $white;
+        padding: 1.5rem 1.5rem;
+        cursor: pointer;
+        font-size: inherit;
+        font-weight: 600;
+        transition: all 0.3s ease;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        font-size: 16px;
+        color: $black;
+        @media (min-width: $tablet) {
+            font-size: 17px;
+        }
+        @media (min-width: $large) {
+            font-size: 19px;
+        }
+        @media (min-width: $xxlarge) {
+            font-size: 20px;
+        }
+    }
+    .faq-icon {
+        @include twentyFour();
+        color: $black;
+        transition: transform 0.3s ease;
+        font-weight: bold;
+        margin-bottom: 0!important;
+
+    }
+    .faq-answer {
+        max-height: 0;
+        overflow: hidden;
+        transition: max-height 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+        background: $white;
+        color: $black;
+        p {
+            &:last-of-type {
+                margin-bottom: 0;
+            }
+        }
+        .faq-answer-content {
+            padding: 0 3.5rem 1.5rem 1.5rem;
+            opacity: 0;
+            transform: translateY(-10px);
+            transition: all 0.3s ease 0.1s;
+        }
+    }
+    &.active {
+        .faq-icon {
+            transform: rotate(45deg);
+        }
+        .faq-answer {
+            max-height: 1000px;
+        }
+        .faq-answer-content {
+            opacity: 1;
+            transform: translateY(0);
+        }
+    }
+}

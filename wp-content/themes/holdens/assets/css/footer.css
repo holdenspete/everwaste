@@ -1,0 +1,213 @@
+.container {
+  width: 100%;
+  max-width: 1510px;
+  margin: 0 auto;
+  padding: 0 1rem;
+}
+@media (min-width: 768px) {
+  .container {
+    padding: 0 1.5rem;
+  }
+}
+@media (min-width: 1200px) {
+  .container {
+    padding: 0 2rem;
+  }
+}
+@media (min-width: 1400px) {
+  .container {
+    padding: 0 3rem;
+  }
+}
+@media (min-width: 1500px) {
+  .container {
+    padding: 0 4rem;
+  }
+}
+
+footer {
+  background-color: #000833;
+  overflow: hidden;
+  color: #F3F3F3;
+  padding: 1.5rem 0;
+  float: left;
+  width: 100%;
+  position: relative;
+  border-top: 2px solid #2A00FF;
+}
+@media (min-width: 1100px) {
+  footer {
+    background-color: #2A00FF;
+    transition: 1s ease;
+  }
+  footer.active {
+    background-color: #000833;
+  }
+}
+footer a {
+  color: #F3F3F3;
+  text-decoration: none;
+}
+@media (min-width: 1100px) {
+  footer a:hover {
+    color: #FFEE00;
+  }
+}
+footer .container a {
+  color: #F3F3F3;
+}
+@media (min-width: 1100px) {
+  footer .container a:hover {
+    color: #FFEE00;
+  }
+}
+footer .container ul {
+  padding-left: 0;
+  list-style: none;
+}
+footer .container .top {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  flex-direction: column;
+}
+@media (min-width: 640px) {
+  footer .container .top {
+    gap: 3.5rem;
+    display: grid;
+    grid-template-columns: auto auto;
+    align-items: center;
+  }
+}
+@media (min-width: 1100px) {
+  footer .container .top {
+    padding-bottom: 1rem;
+  }
+}
+footer .container .top .left .logo svg {
+  max-width: 240px;
+}
+@media (min-width: 1100px) {
+  footer .container .top .left .logo svg {
+    max-width: 350px;
+  }
+}
+@media (min-width: 1200px) {
+  footer .container .top .left .logo svg {
+    padding-left: 3rem;
+  }
+}
+@media (min-width: 1400px) {
+  footer .container .top .left .logo svg {
+    max-width: 380px;
+  }
+}
+@media (min-width: 640px) {
+  footer .container .top .right {
+    display: flex;
+    gap: 3rem;
+    flex-direction: column;
+  }
+}
+@media (min-width: 768px) {
+  footer .container .top .right {
+    max-width: 720px;
+    margin-left: auto;
+  }
+}
+footer .container .top .right .nav-menu {
+  margin-bottom: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 640px) {
+  footer .container .top .right .nav-menu {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1100px) {
+  footer .container .top .right .nav-menu {
+    max-width: 570px;
+  }
+}
+footer .container .top .right .nav-menu li {
+  font-weight: 400;
+}
+@media (min-width: 640px) {
+  footer .container .top .right .thirdsWrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 1rem;
+  }
+}
+@media (min-width: 768px) {
+  footer .container .top .right .thirdsWrapper {
+    gap: 2rem;
+  }
+}
+@media (min-width: 1100px) {
+  footer .container .top .right .thirdsWrapper {
+    gap: 4rem;
+  }
+}
+footer .container .top .right .thirdsWrapper > div p {
+  font-size: 1rem;
+}
+footer .container .top .right .thirdsWrapper > div a {
+  text-decoration: underline;
+  color: #F3F3F3;
+}
+@media (min-width: 1100px) {
+  footer .container .top .right .thirdsWrapper > div a:hover {
+    color: #FFEE00;
+  }
+}
+footer .container .bottom {
+  padding-top: 1rem;
+  font-size: 0.7rem;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column-reverse;
+  gap: 1rem;
+  position: relative;
+}
+footer .container .bottom:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: -2000px;
+  width: 8000px;
+  height: 1px;
+  background-color: #F3F3F3;
+}
+@media (min-width: 1100px) {
+  footer .container .bottom {
+    font-size: 0.8rem;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
+footer .container .bottom .right ul {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+@media (min-width: 768px) {
+  footer .container .bottom .right ul {
+    flex-direction: row;
+    justify-content: space-between;
+  }
+}
+@media (min-width: 1200px) {
+  footer .container .bottom .right ul {
+    gap: 2rem;
+  }
+}
+footer .container .bottom .right ul li a {
+  text-decoration: underline;
+}/*# sourceMappingURL=footer.css.map */

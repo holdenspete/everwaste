@@ -1,0 +1,103 @@
+@import 'common';
+
+.places {
+    padding-bottom: 3rem;
+    .container {
+        gap: 1rem;
+        display: grid;
+        .place {
+            > div {
+                aspect-ratio: 1 / 1;
+                height: 100%;
+                width: 100%;
+            }
+            @media (min-width: 640px) {
+                display: grid;
+                gap: 1rem;
+                grid-template-columns: 1fr 1fr;
+            }
+            
+            .text {
+                background-color: #102210;
+                border-radius: 30px;
+                padding: 1.25rem;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                aspect-ratio: 1 / 1.1;
+                color: $white;
+                @media (min-width: 640px) {
+                    width: 100%;
+                }
+                @media (min-width: $tablet) {
+                    aspect-ratio: 1 / 1;
+                }
+              
+
+                h2 {
+                    font-size: clamp(23px, 3.7vw, 35px);
+                    margin: 0 0 1rem;
+                }
+               
+                .email {
+                    font-family: "Antonio", Georgia, serif;
+                    font-size: clamp(25px, 4vw, 46px);
+                    font-weight: 700;
+                    color: $white;
+                    text-decoration: none;
+                }
+                a {
+
+                }
+                .bottom {
+                    display: flex;
+                    flex-direction: column;
+                    gap: 2rem;
+                    @media (min-width: $tablet) {
+                        gap: 1rem;                        
+                    }
+                    @media (min-width: $large) {
+                        flex-direction: row;
+                        justify-content: space-between;
+                        align-items: flex-end;
+                    }
+                    .button {
+                        width: fit-content;
+                        min-width: fit-content;
+                        height: fit-content;
+                        background-color: $pink;           
+                        
+                        @media (min-width: $large) {
+                            &:hover {
+                                background-color: $greenCard;           
+                            }
+                        }
+                    
+                    }
+                    p {
+                        margin: 0;
+                    }
+                }
+            }
+            .imageWrapper {
+                display: none;
+                @media (min-width: 640px) {
+                    border-radius: 30px;
+                    overflow: hidden;
+                    display: block;
+                    width: 100%;
+                    aspect-ratio: 1 / 1.1;
+                }
+                @media (min-width: $tablet) {
+                    aspect-ratio: 1 / 1;
+                }
+                img {
+                    width: 100%;
+                    height: 100%;
+                    object-fit: cover;
+                }
+            }
+            
+        }
+    }
+}

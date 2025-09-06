@@ -1,0 +1,42 @@
+@import 'common';
+
+.hero {
+    &.justText {
+        .container {
+            @media (min-width: $large) {
+                padding-bottom: 4rem;
+            }        
+            .description {
+                @media (min-width: $large) {
+                    top: 6.5rem;
+                    position: relative;
+                }        
+                p {
+                    max-width: 100%;
+
+                }
+                @media (min-width: 1600px) {
+                    top: 5.5rem;
+                }        
+                @media (min-width: 1700px) {
+                    top: 5.2rem;
+                }  
+                .button {
+                    min-width: 150px;
+                }      
+            }
+        }
+    }
+    .container {
+        
+    }
+}
+
+.introGradient {
+    background: linear-gradient(180deg, #102210 0%, #EDEDED 40%, #EDEDED 100%);
+    position: relative;
+    z-index: 3;
+    @media (min-width: 640px) {
+        background: linear-gradient(180deg, #102210 0%, #EDEDED 71.62%, #EDEDED 100%);        
+    }
+}
