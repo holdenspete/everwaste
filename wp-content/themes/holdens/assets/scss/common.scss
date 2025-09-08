@@ -37,7 +37,9 @@ h1, h2, h3, h4, h5, h6 {
     position: relative;
     top: -3.5rem;
 }
-
+.wpcf7-response-output {
+    border-color: $yellow;
+}
 @mixin twentyFour() {
     margin-bottom: 2rem;
     font-size: 16px;
@@ -145,13 +147,15 @@ input[type="submit"] {
     transition: .3s ease;
 }
 a {
-    color: $black;
+    color: $white;
     text-decoration: none;
     transition: .3s ease;
     
-    // &:hover {
-    //     color: darken($primary, 15%);
-    // }
+    @media (min-width: $large) {
+        &:hover {
+            color: $yellow;
+        }
+    }
 }
 .scrollTo {
     position: relative;
@@ -279,25 +283,52 @@ img {
     .container {
         .inner {
             border-radius: 5px;
-            border: 2px solid $yellow;
-            background: linear-gradient(180deg, #190099 -39.01%, #000833 100%) padding-box,
-            linear-gradient(30deg, rgba($yellow, 0) 0%, rgba($yellow, .2) 30%, $yellow 90%) border-box;
-            border: 2px solid transparent;
-            border-radius: 5px;
             padding: 3rem 2rem;
             margin-top: 1.5rem;
             margin-bottom: 1.5rem;
+            position: relative;
+            overflow: hidden;
+            border: none!important;
             @media (max-width: 500px) {
                 padding: 2.5rem 1.25rem;
             }
             @media (min-width: $large) {
                 padding: 3rem;                
             }
+            @media (min-width: $large) {
+                &.active {
+                    &:after {
+                        animation: shimmer 1.5s linear 0.25s;
+                    }
+                }
+            }
             @media (min-width: $xlarge) {
                 padding: 4rem;                
             }
+          
+            &:before {
+                content: '';
+                position: absolute;
+                inset: 2px;
+                background: linear-gradient(180deg, #190099 -39.01%, #000833 100%);
+                border-radius: 5px;
+                z-index: 1;
+                pointer-events: none;
+            }
+            &:after {
+                content: '';
+                position: absolute;
+                inset: -160%;
+                // background: linear-gradient(30deg, #00083310 25%, #2A00FF 75%);
+                background: linear-gradient(30deg,rgba(255, 238, 0, 0) 30%, rgba(255, 238, 0, 0.2) 50%, #FFEE00 60%);
+                z-index: 0;
+                pointer-events: none;
+                opacity: 1;
+            }
 
             .title {
+                position: relative;
+                z-index: 3;
                 h3 {
                     font-size: 1.8rem;
                     @media (min-width: $tablet) {
@@ -318,6 +349,8 @@ img {
                 display: grid;
                 grid-template-columns: 1fr;
                 gap: 4rem;
+                position: relative;
+                z-index: 3;
                 @media (min-width: $tablet) {
                     grid-template-columns: auto 50%;
                     gap: 3rem;

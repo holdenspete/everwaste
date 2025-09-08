@@ -203,6 +203,7 @@ header {
                             &:hover {
                                 &:after {
                                     opacity: 1;
+                                    transform: scaleX(1) skew(-20deg);
                                 }
                             }        
                         }
@@ -214,11 +215,14 @@ header {
                             right: 0;
                             left: 0;
                             margin: auto;
-                            border-radius: 100vw;
+                            border-radius: 5px;
                             background-color: $brightBlue;
-                            height: 6px;
-                            width: 6px;
+                            height: 4px;
+                            transform: scaleX(0) skew(-20deg);
                             position: absolute;
+                            transform-origin: right;
+                            max-width: 30px;
+
                             @media (max-width: 1099px) {
                                 z-index: -1;
                                 bottom: 0;
@@ -226,7 +230,6 @@ header {
                                 background-color: $brightBlue;
                                 height: 46px;
                                 width: 46px;
-                            
                             }
                         }
                     }

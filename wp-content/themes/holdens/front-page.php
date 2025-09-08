@@ -219,7 +219,7 @@ get_header(); ?>
 <section class="contactFormSec">
     <div class="anchor" id="getInTouch"></div>
     <div class="container">
-        <div class="inner">
+        <div class="inner onScreen">
             <div class="title">
                 <h3>Get in touch</h3>
             </div>
@@ -273,7 +273,7 @@ document.addEventListener('DOMContentLoaded', function() {
         tl.to(heroDescription, { opacity: 1, duration: .3 }, "-=0.6");
         tl.to(heroButton, { opacity: 1, duration: .3 }, "-=0.6");
         tl.to(reveal, { opacity: 0, duration: .3 }, "-=0.4");
-        tl.to(aboutIcon, { y: 0, opacity: 1, duration: .3 }, "-=0.4");
+        tl.to(aboutIcon, { y: 0, opacity: .7, duration: .3 }, "-=0.4");
     }
 
     const onScreenElements = document.querySelectorAll('.onScreen');

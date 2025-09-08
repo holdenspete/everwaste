@@ -30,7 +30,7 @@ function get_current_template_name() {
 }
 
 // Add theme constants
-define('THEME_VERSION', '1.0.0');
+define('THEME_VERSION', '1.0.62');
 define('THEME_PATH', get_template_directory());
 define('THEME_URL', get_template_directory_uri());
 define('ASSETS_URL', THEME_URL . '/assets');
@@ -121,66 +121,66 @@ function add_logo_version() {
 }
 
 // Register Custom Post Type for Clients
-function create_client_post_type() {
-    register_post_type('clients',
-        array(
-            'labels' => array(
-                'name' => __('Clients'),
-                'singular_name' => __('Client')
-            ),
-            'public' => true,
-            'has_archive' => false,
-            'publicly_queryable' => false, // This prevents single pages
-            'supports' => array('title', 'thumbnail'),
-            'menu_icon' => 'dashicons-businessman'
-        )
-    );
-}
-add_action('init', 'create_client_post_type');
+// function create_client_post_type() {
+//     register_post_type('clients',
+//         array(
+//             'labels' => array(
+//                 'name' => __('Clients'),
+//                 'singular_name' => __('Client')
+//             ),
+//             'public' => true,
+//             'has_archive' => false,
+//             'publicly_queryable' => false, // This prevents single pages
+//             'supports' => array('title', 'thumbnail'),
+//             'menu_icon' => 'dashicons-businessman'
+//         )
+//     );
+// }
+// add_action('init', 'create_client_post_type');
 
-// Register Custom Post Type for Staff
-function create_staff_post_type() {
-    register_post_type('staff',
-        array(
-            'labels' => array(
-                'name' => __('Staff'),
-                'singular_name' => __('Staff Member')
-            ),
-            'public' => true,
-            'has_archive' => false,
-            'publicly_queryable' => false,
-            'supports' => array('title', 'thumbnail'),
-            'menu_icon' => 'dashicons-groups'
-        )
-    );
-}
-add_action('init', 'create_staff_post_type');
+// // Register Custom Post Type for Staff
+// function create_staff_post_type() {
+//     register_post_type('staff',
+//         array(
+//             'labels' => array(
+//                 'name' => __('Staff'),
+//                 'singular_name' => __('Staff Member')
+//             ),
+//             'public' => true,
+//             'has_archive' => false,
+//             'publicly_queryable' => false,
+//             'supports' => array('title', 'thumbnail'),
+//             'menu_icon' => 'dashicons-groups'
+//         )
+//     );
+// }
+// add_action('init', 'create_staff_post_type');
 
 // Register Custom Post Type for Projects
-function create_project_post_type() {
-    register_post_type('projects',
-        array(
-            'labels' => array(
-                'name' => __('Projects'),
-                'singular_name' => __('Project'),
-                'add_new' => __('Add New Project'),
-                'add_new_item' => __('Add New Project'),
-                'edit_item' => __('Edit Project'),
-                'view_item' => __('View Project'),
-                'search_items' => __('Search Projects'),
-                'not_found' => __('No projects found'),
-                'not_found_in_trash' => __('No projects found in trash')
-            ),
-            'public' => true,
-            'has_archive' => true,
-            'publicly_queryable' => true,
-            'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
-            'menu_icon' => 'dashicons-portfolio',
-            'rewrite' => array('slug' => 'projects')
-        )
-    );
-}
-add_action('init', 'create_project_post_type');
+// function create_project_post_type() {
+//     register_post_type('projects',
+//         array(
+//             'labels' => array(
+//                 'name' => __('Projects'),
+//                 'singular_name' => __('Project'),
+//                 'add_new' => __('Add New Project'),
+//                 'add_new_item' => __('Add New Project'),
+//                 'edit_item' => __('Edit Project'),
+//                 'view_item' => __('View Project'),
+//                 'search_items' => __('Search Projects'),
+//                 'not_found' => __('No projects found'),
+//                 'not_found_in_trash' => __('No projects found in trash')
+//             ),
+//             'public' => true,
+//             'has_archive' => true,
+//             'publicly_queryable' => true,
+//             'supports' => array('title', 'editor', 'thumbnail', 'excerpt'),
+//             'menu_icon' => 'dashicons-portfolio',
+//             'rewrite' => array('slug' => 'projects')
+//         )
+//     );
+// }
+// add_action('init', 'create_project_post_type');
 
 // AJAX handler for filtering posts
 // AJAX handler for filtering posts

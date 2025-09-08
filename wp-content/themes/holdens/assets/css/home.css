@@ -61,6 +61,10 @@ h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   top: -3.5rem;
 }
 
+.wpcf7-response-output {
+  border-color: #FFEE00;
+}
+
 p {
   transition: 0.3s ease;
   font-size: 0.9rem;
@@ -181,9 +185,14 @@ input[type=submit] {
 }
 
 a {
-  color: #0C070A;
+  color: #F3F3F3;
   text-decoration: none;
   transition: 0.3s ease;
+}
+@media (min-width: 1100px) {
+  a:hover {
+    color: #FFEE00;
+  }
 }
 
 .scrollTo {
@@ -333,13 +342,12 @@ img {
 }
 .contactFormSec .container .inner {
   border-radius: 5px;
-  border: 2px solid #FFEE00;
-  background: linear-gradient(180deg, #190099 -39.01%, #000833 100%) padding-box, linear-gradient(30deg, rgba(255, 238, 0, 0) 0%, rgba(255, 238, 0, 0.2) 30%, #FFEE00 90%) border-box;
-  border: 2px solid transparent;
-  border-radius: 5px;
   padding: 3rem 2rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border: none !important;
 }
 @media (max-width: 500px) {
   .contactFormSec .container .inner {
@@ -351,10 +359,37 @@ img {
     padding: 3rem;
   }
 }
+@media (min-width: 1100px) {
+  .contactFormSec .container .inner.active:after {
+    animation: shimmer 1.5s linear 0.25s;
+  }
+}
 @media (min-width: 1200px) {
   .contactFormSec .container .inner {
     padding: 4rem;
   }
+}
+.contactFormSec .container .inner:before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(180deg, #190099 -39.01%, #000833 100%);
+  border-radius: 5px;
+  z-index: 1;
+  pointer-events: none;
+}
+.contactFormSec .container .inner:after {
+  content: "";
+  position: absolute;
+  inset: -160%;
+  background: linear-gradient(30deg, rgba(255, 238, 0, 0) 30%, rgba(255, 238, 0, 0.2) 50%, #FFEE00 60%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+}
+.contactFormSec .container .inner .title {
+  position: relative;
+  z-index: 3;
 }
 .contactFormSec .container .inner .title h3 {
   font-size: 1.8rem;
@@ -381,6 +416,8 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
+  position: relative;
+  z-index: 3;
 }
 @media (min-width: 768px) {
   .contactFormSec .container .inner .bottom {
@@ -1602,6 +1639,7 @@ img {
   width: 180%;
   height: 100%;
   z-index: -1;
+  opacity: 0.7;
 }
 @media (min-width: 640px) {
   .about .container .icon {
@@ -1685,7 +1723,7 @@ img {
 }
 .rooted .container .bg {
   position: absolute;
-  background: linear-gradient(-130deg, #000833 15%, #1900FF 240%);
+  background: linear-gradient(-130deg, #000833 25%, #1900FF 320%);
   height: 100%;
   width: 45%;
   bottom: 0;
@@ -1714,7 +1752,7 @@ img {
     transition-delay: 0.35s;
   }
   .rooted .container .bg.active {
-    opacity: 1;
+    opacity: 0.7;
     left: -11%;
   }
 }
@@ -1765,7 +1803,7 @@ img {
 }
 .example .container .bg {
   position: absolute;
-  background: linear-gradient(-190deg, #000833 35%, #1900FF 250%);
+  background: linear-gradient(-190deg, #000833 35%, #1900FF 320%);
   height: 85%;
   width: 126%;
   bottom: -2rem;
@@ -1801,7 +1839,7 @@ img {
     transition-delay: 0.35s;
   }
   .example .container .bg.active {
-    opacity: 1;
+    opacity: 0.7;
     left: 18%;
   }
 }
@@ -1833,6 +1871,7 @@ img {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
+  padding: 0 1rem;
 }
 @media (min-width: 1026px) {
   .thirds .container {
@@ -1840,7 +1879,6 @@ img {
   }
 }
 .thirds .container .third {
-  background: linear-gradient(359deg, #190099 0%, #000833 98%) padding-box, linear-gradient(30deg, rgba(0, 8, 51, 0.062745098), #2A00FF) border-box;
   border: 2px solid transparent;
   border-radius: 5px;
   display: flex;
@@ -1848,6 +1886,26 @@ img {
   flex-direction: column;
   align-items: flex-end;
   position: relative;
+  overflow: hidden;
+}
+.thirds .container .third:before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(359deg, #190099 0%, #000833 98%);
+  border-radius: 5px;
+  z-index: 1;
+  pointer-events: none;
+}
+.thirds .container .third:after {
+  content: "";
+  position: absolute;
+  inset: -100%;
+  background: linear-gradient(30deg, rgba(0, 8, 51, 0.062745098) 25%, #2A00FF 75%);
+  border-radius: 5px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
 }
 @media (max-width: 500px) {
   .thirds .container .third {
@@ -1869,15 +1927,26 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+  .thirds .container .third.active:after {
+    animation: shimmer 1.5s linear 0.25s;
+  }
   .thirds .container .third:nth-of-type(2) {
     transition-delay: 0.15s;
+  }
+  .thirds .container .third:nth-of-type(2):after {
+    animation-delay: 0.5s;
   }
   .thirds .container .third:nth-of-type(3) {
     transition-delay: 0.3s;
   }
+  .thirds .container .third:nth-of-type(3):after {
+    animation-delay: 0.75s;
+  }
 }
 .thirds .container .third .text {
   padding-right: 20px;
+  position: relative;
+  z-index: 2;
 }
 @media (min-width: 640px) {
   .thirds .container .third .text {
@@ -1951,6 +2020,7 @@ img {
   position: absolute;
   bottom: 0.75rem;
   right: 0.75rem;
+  z-index: 2;
 }
 @media (max-width: 500px) {
   .thirds .container .third .svgWrapper {
@@ -1966,6 +2036,7 @@ img {
   display: grid;
   gap: 1rem;
   grid-template-columns: 1fr;
+  padding: 0 1rem;
 }
 @media (min-width: 768px) {
   .halves .container {
@@ -1973,7 +2044,6 @@ img {
   }
 }
 .halves .container .half {
-  background: linear-gradient(359deg, #190099 -20%, #000833 98%) padding-box, linear-gradient(30deg, rgba(0, 8, 51, 0.1254901961), #2A00FF) border-box;
   border: 2px solid transparent;
   border-radius: 5px;
   display: flex;
@@ -1981,6 +2051,26 @@ img {
   flex-direction: column;
   align-items: flex-end;
   position: relative;
+  overflow: hidden;
+}
+.halves .container .half:before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(359deg, #190099 0%, #000833 98%);
+  border-radius: 5px;
+  z-index: 1;
+  pointer-events: none;
+}
+.halves .container .half:after {
+  content: "";
+  position: absolute;
+  inset: -160%;
+  background: linear-gradient(30deg, rgba(0, 8, 51, 0.062745098) 25%, #2A00FF 75%);
+  border-radius: 5px;
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
 }
 @media (max-width: 500px) {
   .halves .container .half {
@@ -2002,12 +2092,20 @@ img {
     opacity: 1;
     transform: translateY(0);
   }
+  .halves .container .half.active:after {
+    animation: shimmer 1.5s linear 0.25s;
+  }
   .halves .container .half:nth-of-type(2) {
     transition-delay: 0.15s;
+  }
+  .halves .container .half:nth-of-type(2):after {
+    animation-delay: 0.5s;
   }
 }
 .halves .container .half .text {
   padding-right: 20px;
+  position: relative;
+  z-index: 3;
 }
 @media (min-width: 640px) {
   .halves .container .half .text {
@@ -2068,6 +2166,7 @@ img {
   position: absolute;
   bottom: 0.75rem;
   right: 0.75rem;
+  z-index: 3;
 }
 @media (max-width: 500px) {
   .halves .container .half .svgWrapper {
@@ -2124,7 +2223,7 @@ img {
   display: inline-flex;
   align-items: center;
   overflow: hidden;
-  border-radius: 18px;
+  border-radius: 5px;
 }
 @media (min-width: 640px) {
   .services .container .allServices .service h3 {
@@ -2171,6 +2270,7 @@ img {
 .services .container .allServices .service h3 span {
   position: relative;
   z-index: 2;
+  color: #F3F3F3;
 }
 .services .container .allServices .service h3 img {
   position: absolute;
@@ -2423,4 +2523,15 @@ img {
 }
 .whatsOn .container .whatsOnWrapper .monthGroup .whatsOnItem .actionColumn .button {
   font-size: 1rem;
+}
+
+@keyframes shimmer {
+  0% {
+    opacity: 1;
+    transform: rotate(0deg);
+  }
+  100% {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
 }/*# sourceMappingURL=home.css.map */
