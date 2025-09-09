@@ -221,7 +221,7 @@ header {
                             transform: scaleX(0) skew(-20deg);
                             position: absolute;
                             transform-origin: right;
-                            max-width: 30px;
+                            // max-width: 30px;
 
                             @media (max-width: 1099px) {
                                 z-index: -1;

@@ -1253,7 +1253,6 @@ header .container .main-navigation ul li a:after {
   transform: scaleX(0) skew(-20deg);
   position: absolute;
   transform-origin: right;
-  max-width: 30px;
 }
 @media (max-width: 1099px) {
   header .container .main-navigation ul li a:after {
