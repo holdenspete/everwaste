@@ -28,15 +28,15 @@
                         </div>
                         <div class="links">
                             <p><strong>Email:</strong><br>
-                                <a href="mailto:info@everwaste.co.uk">info@everwaste.co.uk</a>
+                                <a href="mailto:<?php the_field('email_address', 2); ?>"><?php the_field('email_address', 2); ?></a>
                             </p>
-                            <p><strong>Phone:</strong><br>
+                            <!-- <p><strong>Phone:</strong><br>
                                 <a href="tel:0044123456789">+44 1234 56789</a>
-                            </p>
+                            </p> -->
                         </div>
                         <div class="socials">
                             <p><strong>Social:</strong><br>
-                            <a href="https://linkedin.com">LinkedIn</a></p>
+                            <a href="<?php the_field('linkedin_address', 2); ?>">LinkedIn</a></p>
                         </div>
                     </div>
                 </div>
@@ -104,6 +104,21 @@
         });
         }
 
+        // sticky header
+        let lastScrollPosition = window.scrollY;
+        const header = document.querySelector('header');
+
+        window.addEventListener('scroll', () => {
+            const currentScroll = window.scrollY;
+            
+            if (currentScroll > 0) {
+                header.classList.add('sticky');
+            } else {
+                header.classList.remove('sticky');
+            }
+            
+            lastScrollPosition = currentScroll;
+        });
     });
     </script>
 </body>

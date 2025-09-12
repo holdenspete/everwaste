@@ -112,16 +112,9 @@ function holdens_enqueue_page_styles() {
     // Map templates to CSS files
     $template_styles = array(
         'front-page' => 'home',
-        'page-about' => 'about',
-        'page-sculpt-academy' => 'sculpt-academy',
-        'page-timetables' => 'timetables',
-        'page-work-with-us' => 'work-with-us',
-        'page-faqs' => 'faqs',
-        'page-retreats' => 'retreats',
-        'page-memberships-prices' => 'memberships-prices',
+        // 'page-about' => 'about',
         'page-contact-us' => 'contact-us',
         'single' => 'single',
-        'single-retreats' => 'single-retreats',
         'archive' => 'archive',
         'index' => 'blog'
     );

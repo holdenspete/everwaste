@@ -16,13 +16,16 @@ h1 {
     margin-bottom: 3rem;
 }
 .page-content .container h2, .page-content .container h3 {
-    margin-top: 2rem;
-    margin-bottom: 3rem;
-} {
-    padding-left: 1.5rem;
+    margin-top: 3rem;
+    margin-bottom: 2.5rem;
+} 
+
+.page-content .container p {
+    margin-bottom: 2rem;
 }
 .page-content .container ul {
     padding-left: 1.5rem;
+    margin-bottom: 2rem;
 }
 .page-content .container {
     padding-top: 3rem;
@@ -31,14 +34,20 @@ h1 {
     margin-left: auto;
     margin-right: auto;
 }
+
+@media (min-width: 1100px) {
+    .page-content .container ul li {
+        font-size: 1.15rem;
+    }   
+}
 </style>
 
 <?php while (have_posts()) : the_post(); ?>
 
-    <section class="page-hero">
+    <section class="page-hero" style="opacity:0;transform:translateY(50px);">
         <div class="container">
             <div class="page-hero-content">
-                <h1 style="opacity:0;" class="page-title"><?php the_title(); ?></h1>
+                <h1 class="page-title"><?php the_title(); ?></h1>
             </div>
         </div>
     </section>
@@ -65,23 +74,8 @@ document.addEventListener('DOMContentLoaded', function() {
         if (window.gsap) {
             const tl = gsap.timeline();
             // You can add more animations to the timeline as needed
-            
-            const h1 = document.querySelector('.page-hero h1');
-            
-            if (h1 && window.SplitText) {
-                const split = new SplitText([h1], { type: "words,chars" });
-                gsap.set(split.chars, { y: 80, opacity: 0 });
-                gsap.set(h1, { opacity: 1 });
-                tl.to(split.chars, {
-                    y: 0,
-                    opacity: 1,
-                    duration: 0.6,
-                    stagger: 0.03,
-                    ease: "power3.out"
-                });
-            }
-            tl.to('.page-content', { y: 0, opacity: 1, duration: .5 }, "-=0.65");
-
+            tl.to('.page-hero', { y: 0, opacity: 1, duration: .5 });
+            tl.to('.page-content', { y: 0, opacity: 1, duration: .5 }, "-=0.5");
         }
 
         const onScreenElements = document.querySelectorAll('.onScreen');

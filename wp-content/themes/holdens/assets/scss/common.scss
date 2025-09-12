@@ -32,6 +32,10 @@ h1, h2, h3, h4, h5, h6 {
     span {
         color: $yellow;
     }
+    em {
+        color: $yellow;
+        font-style: normal;
+    }
 }
 .anchor {
     position: relative;
@@ -401,9 +405,8 @@ img {
                             flex-direction: row-reverse;
                             position: relative;
                             margin: 0;
-                            width: 90px;
-                            
-                            margin-right: .35rem;
+                            width: 90px;                            
+                            margin-right: .9rem;
                             &:after {
                                 content: "";
                                 position: absolute;
@@ -416,8 +419,8 @@ img {
                                 background-color: $white;
                                 height: 100%;
                                 width: 100%;
-                                transform: skewX(-20deg);
-                                border-radius: 8px;
+                                transform: skewX(-35deg);
+                                border-radius: 3px;
                                 transition: transform 0.3s ease, border-radius 0.3s ease;
                             }
                             &:hover {
@@ -563,6 +566,7 @@ img {
     &.yellow {
         color: $black;
         position: relative;
+        height: 40px;
         &:after {
             content: "";
             position: absolute;
@@ -575,8 +579,8 @@ img {
             background-color: $yellow;
             height: 100%;
             width: 100%;
-            transform: skewX(-20deg);
-            border-radius: 8px;
+            transform: skewX(-35deg);
+            border-radius: 3px;
             transition: transform 0.3s ease, border-radius 0.3s ease;
             z-index: -1;
         }

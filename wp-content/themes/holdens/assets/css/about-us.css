@@ -185,9 +185,14 @@ input[type=submit] {
 }
 
 a {
-  color: #0C070A;
+  color: #F3F3F3;
   text-decoration: none;
   transition: 0.3s ease;
+}
+@media (min-width: 1100px) {
+  a:hover {
+    color: #FFEE00;
+  }
 }
 
 .scrollTo {
@@ -337,13 +342,12 @@ img {
 }
 .contactFormSec .container .inner {
   border-radius: 5px;
-  border: 2px solid #FFEE00;
-  background: linear-gradient(180deg, #190099 -39.01%, #000833 100%) padding-box, linear-gradient(30deg, rgba(255, 238, 0, 0) 0%, rgba(255, 238, 0, 0.2) 30%, #FFEE00 90%) border-box;
-  border: 2px solid transparent;
-  border-radius: 5px;
   padding: 3rem 2rem;
   margin-top: 1.5rem;
   margin-bottom: 1.5rem;
+  position: relative;
+  overflow: hidden;
+  border: none !important;
 }
 @media (max-width: 500px) {
   .contactFormSec .container .inner {
@@ -355,10 +359,37 @@ img {
     padding: 3rem;
   }
 }
+@media (min-width: 1100px) {
+  .contactFormSec .container .inner.active:after {
+    animation: shimmer 1.5s linear 0.25s;
+  }
+}
 @media (min-width: 1200px) {
   .contactFormSec .container .inner {
     padding: 4rem;
   }
+}
+.contactFormSec .container .inner:before {
+  content: "";
+  position: absolute;
+  inset: 2px;
+  background: linear-gradient(180deg, #190099 -39.01%, #000833 100%);
+  border-radius: 5px;
+  z-index: 1;
+  pointer-events: none;
+}
+.contactFormSec .container .inner:after {
+  content: "";
+  position: absolute;
+  inset: -160%;
+  background: linear-gradient(30deg, rgba(255, 238, 0, 0) 30%, rgba(255, 238, 0, 0.2) 50%, #FFEE00 60%);
+  z-index: 0;
+  pointer-events: none;
+  opacity: 1;
+}
+.contactFormSec .container .inner .title {
+  position: relative;
+  z-index: 3;
 }
 .contactFormSec .container .inner .title h3 {
   font-size: 1.8rem;
@@ -385,6 +416,8 @@ img {
   display: grid;
   grid-template-columns: 1fr;
   gap: 4rem;
+  position: relative;
+  z-index: 3;
 }
 @media (min-width: 768px) {
   .contactFormSec .container .inner .bottom {
@@ -439,7 +472,7 @@ img {
   position: relative;
   margin: 0;
   width: 90px;
-  margin-right: 0.35rem;
+  margin-right: 0.9rem;
 }
 .contactFormSec .container .inner .bottom form .submitWrapper p:after {
   content: "";
@@ -453,8 +486,8 @@ img {
   background-color: #F3F3F3;
   height: 100%;
   width: 100%;
-  transform: skewX(-20deg);
-  border-radius: 8px;
+  transform: skewX(-35deg);
+  border-radius: 3px;
   transition: transform 0.3s ease, border-radius 0.3s ease;
 }
 @media (min-width: 1100px) {
@@ -613,6 +646,7 @@ img {
 .btn.yellow, .button.yellow {
   color: #0C070A;
   position: relative;
+  height: 40px;
 }
 .btn.yellow:after, .button.yellow:after {
   content: "";
@@ -626,8 +660,8 @@ img {
   background-color: #FFEE00;
   height: 100%;
   width: 100%;
-  transform: skewX(-20deg);
-  border-radius: 8px;
+  transform: skewX(-35deg);
+  border-radius: 3px;
   transition: transform 0.3s ease, border-radius 0.3s ease;
   z-index: -1;
 }

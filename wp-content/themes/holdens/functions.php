@@ -30,7 +30,7 @@ function get_current_template_name() {
 }
 
 // Add theme constants
-define('THEME_VERSION', '1.0.64');
+define('THEME_VERSION', '1.1.38');
 define('THEME_PATH', get_template_directory());
 define('THEME_URL', get_template_directory_uri());
 define('ASSETS_URL', THEME_URL . '/assets');
