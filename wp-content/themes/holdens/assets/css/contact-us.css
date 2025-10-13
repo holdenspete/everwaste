@@ -55,6 +55,10 @@ h1 strong, h1 span, h2 strong, h2 span, h3 strong, h3 span, h4 strong, h4 span, 
 h1 span, h2 span, h3 span, h4 span, h5 span, h6 span {
   color: #FFEE00;
 }
+h1 em, h2 em, h3 em, h4 em, h5 em, h6 em {
+  color: #FFEE00;
+  font-style: normal;
+}
 
 .anchor {
   position: relative;

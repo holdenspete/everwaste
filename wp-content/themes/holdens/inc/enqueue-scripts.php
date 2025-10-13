@@ -21,7 +21,7 @@ function holdens_enqueue_scripts() {
         'holdens-common-style',
         ASSETS_URL . '/css/common.css',
         array('holdens-fonts'),
-        THEME_VERSION
+        filemtime(THEME_PATH . '/assets/css/common.css')
     );
 
     // Header styles
@@ -29,7 +29,7 @@ function holdens_enqueue_scripts() {
         'holdens-header-style',
         ASSETS_URL . '/css/header.css',
         array('holdens-common-style'),
-        THEME_VERSION
+        filemtime(THEME_PATH . '/assets/css/header.css')
     );
 
     // Footer styles
@@ -37,7 +37,7 @@ function holdens_enqueue_scripts() {
         'holdens-footer-style',
         ASSETS_URL . '/css/footer.css',
         array('holdens-common-style'),
-        THEME_VERSION
+        filemtime(THEME_PATH . '/assets/css/footer.css')
     );
 
     // Page-specific styles
@@ -112,7 +112,7 @@ function holdens_enqueue_page_styles() {
     // Map templates to CSS files
     $template_styles = array(
         'front-page' => 'home',
-        // 'page-about' => 'about',
+        'page-sustainability' => 'sustainability',
         'page-contact-us' => 'contact-us',
         'single' => 'single',
         'archive' => 'archive',
@@ -130,7 +130,7 @@ function holdens_enqueue_page_styles() {
             'holdens-page-style',
             $css_path,
             array('holdens-common-style'),
-            THEME_VERSION
+            filemtime(THEME_PATH . '/assets/css/' . $css_file . '.css')
         );
     }
 

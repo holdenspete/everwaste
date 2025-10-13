@@ -36,8 +36,7 @@ get_header(); ?>
                 <div class="inner" style="opacity: 0;">                    
                     <?php the_field('hero_title'); ?>
                     <?php the_field('hero_description'); ?>
-                    <!-- <a href="<?php // echo esc_url(home_url('/')); ?>contact-us" class="button yellow">Contact Us</a> -->
-                    <a href="#getInTouch" class="button yellow">Get in touch</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>contact-us" class="button yellow">Get in touch</a>
                 </div>
             </div>
         </div>
@@ -252,25 +251,8 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<section class="contactFormSec">
-    <div class="anchor" id="getInTouch"></div>
-    <div class="container">
-        <div class="inner onScreen">
-            <div class="title">
-                <?php the_field('get_in_touch'); ?>
-            </div>
-            <div class="bottom">
-                <div class="form">
-                    <?php echo do_shortcode('[contact-form-7 id="208520d" title="Contact form"]'); ?>
-                </div>
-                <div class="text">
-                    <?php the_field('get_in_touch_description'); ?>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
 
+<?php include 'contactForm.php'; ?>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
