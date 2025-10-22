@@ -10,27 +10,18 @@ get_header(); ?>
         <div class="videoWrapper">
             <div class="reveal"></div>
             <div class="bgImage">
-                <img class="heroTab" src="/wp-content/themes/holdens/assets/images/hero.jpg" alt="Everwaste - Specialist Waste Solutions">
-                <img class="heroMob" src="/wp-content/themes/holdens/assets/images/heroMobile.jpg" alt="Everwaste - Specialist Waste Solutions">
+                <?php 
+                $hero_image = get_field('hero_image');
+                if($hero_image): ?>
+                    <img class="heroTab" src="<?php echo esc_url($hero_image['url']); ?>" alt="<?php echo esc_attr($hero_image['alt']); ?>">
+                <?php endif; ?>
+                <?php 
+                $hero_image_mobile = get_field('hero_image_mobile');
+                if($hero_image_mobile): ?>
+                    <img class="heroMob" src="<?php echo esc_url($hero_image_mobile['url']); ?>" alt="<?php echo esc_attr($hero_image_mobile['alt']); ?>">
+                <?php endif; ?>
             </div>
-            <iframe 
-                class="mobVid"
-                id="vimeoPlayer"
-                src="https://player.vimeo.com/video/1117466915?badge=0&amp;&amp;autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1&amp;background=1" 
-                allow="autoplay; fullscreen; picture-in-picture" 
-                allowfullscreen="" 
-                title="Everwaste - Specialist Waste Solutions" 
-                data-ready="true" 
-                frameborder="0"></iframe>
-            <iframe 
-                class="tabVid"
-                id="vimeoPlayer"
-                src="https://player.vimeo.com/video/1115441329?badge=0&amp;&amp;autoplay=1&amp;loop=1&amp;autopause=0&amp;muted=1&amp;background=1" 
-                allow="autoplay; fullscreen; picture-in-picture" 
-                allowfullscreen="" 
-                title="Everwaste - Specialist Waste Solutions" 
-                data-ready="true" 
-                frameborder="0"></iframe>
+            
             <div class="text">
                 <div class="shape" style="right: 150%;"></div>
                 <div class="inner" style="opacity: 0;">                    
@@ -39,14 +30,6 @@ get_header(); ?>
                 </div>
             </div>
         </div>
-        
-        <script src="https://player.vimeo.com/api/player.js"></script>
-        <script>
-            var player = new Vimeo.Player('vimeoPlayer');
-            player.ready().then(function() {
-                document.getElementById('vimeoPlayer').classList.add('loaded');
-            });
-        </script>
     </div>
 </section>
 
@@ -64,8 +47,31 @@ get_header(); ?>
       
         <div class="text aboutText" style="opacity: 0;transform: translateY(100px);">
             <div class="inner">
-                <h2 class="green"><?php the_field('model_title'); ?></h2>
+                <?php the_field('model_title'); ?>
                 <?php the_field('model_description'); ?>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="halves">
+    <div class="container">
+        <div class="half onScreen">
+            <div class="text">
+                <h3><?php the_field('progress_title'); ?></h3>
+                <?php the_field('progress_description'); ?>
+            </div>
+            <div class="svgWrapper">
+                <svg viewBox="0 0 39 39" xmlns="http://www.w3.org/2000/svg" width="39" height="39" fill="none" viewBox="0 0 39 39"><path fill="#fff" d="M19.51 26.325q2.84 0 4.827-1.99 1.988-1.992 1.988-4.835v-6.825H19.5q-2.844 0-4.834 1.988t-1.99 4.828q0 .984.284 1.918.284.935.812 1.747l-.65.674q-.447.464-.447 1.032 0 .57.447 1.016t1.016.447q.569 0 1.032-.447l.674-.65a6.9 6.9 0 0 0 1.747.813q.934.284 1.918.284M19.5 23.4q-.405 0-.772-.093a7 7 0 0 1-.73-.232l2.6-2.6q.446-.447.446-1.036 0-.59-.447-1.036t-1.036-.447-1.036.447l-2.6 2.6a7 7 0 0 1-.232-.731 3 3 0 0 1-.093-.772q0-1.638 1.131-2.769 1.13-1.131 2.77-1.131h3.9v3.9q0 1.638-1.132 2.769T19.5 23.4m0 13.65-5.484-4.266-6.92-.844-.84-6.956L1.95 19.5l4.308-5.504.837-6.9 6.9-.838L19.5 1.95l5.485 4.306 6.906.813.853 6.947L37.05 19.5l-4.265 5.484-.845 6.92-6.955.84zm0-3.697 4.347-3.372 5.444-.69.69-5.444 3.372-4.347-3.36-4.344-.697-5.452-5.451-.696L19.5 5.647l-4.347 3.372-5.443.69-.691 5.444L5.647 19.5l3.372 4.347.69 5.444 5.444.69z"/></svg>
+            </div>
+        </div>
+        <div class="half onScreen">
+            <div class="text">
+                <h3><?php the_field('circular_title'); ?></h3>
+                <?php the_field('circular_description'); ?>
+            </div>
+            <div class="svgWrapper">
+                <svg viewBox="0 0 34 34" xmlns="http://www.w3.org/2000/svg" width="34" height="34" fill="none" viewBox="0 0 34 34"><path fill="#fff" d="M12.805 29.042q-4.256-1.77-6.8-5.549-2.545-3.778-2.545-8.342a15 15 0 0 1 .795-4.84l-2.823 1.613L0 9.444l7.436-4.25 4.295 7.399-2.466 1.416-2.028-3.463a13.5 13.5 0 0 0-.676 2.263q-.238 1.162-.238 2.38 0 3.819 2.167 6.907 2.168 3.09 5.786 4.467zm11.651-18.653V7.556h4.056q-1.71-2.165-4.255-3.444T18.73 2.833q-2.227 0-4.176.748a14 14 0 0 0-3.579 2.007l-1.47-2.48A15.4 15.4 0 0 1 13.758.827Q16.105.001 18.73 0q3.46 0 6.383 1.397a16.3 16.3 0 0 1 5.07 3.758V1.89h2.864v8.5zM23.104 34l-7.436-4.25 4.295-7.359 2.505 1.417-2.028 3.463q4.572-.67 7.635-4.112 3.062-3.444 3.062-7.93a12.5 12.5 0 0 0-.16-2.007h2.904q.08.472.1.964.019.492.019 1.004 0 5.352-3.48 9.523t-8.808 5.234l2.824 1.613z"/></svg>
             </div>
         </div>
     </div>
@@ -77,12 +83,16 @@ get_header(); ?>
         <div class="bg onScreen"></div>       
         <div class="imageWrapper">
             <div class="inner maskBottomRight">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/example.jpg" alt="Everwaste - Sustainability that leads by example.">
+                <?php 
+                $image = get_field('core_image');
+                if($image): ?>
+                    <img src="<?php echo esc_url($image['url']); ?>" alt="<?php echo esc_attr($image['alt']); ?>">
+                <?php endif; ?>
             </div>
         </div>
         <div class="text">
             <div class="inner">
-                <h2 class="green"><?php the_field('core_title'); ?></h2>
+                <?php the_field('core_title'); ?>
                 <?php the_field('core_description'); ?>
             </div>
         </div>        
@@ -97,7 +107,7 @@ get_header(); ?>
                 <?php the_field('policy_description'); ?>
             </div>
             <div class="svgWrapper">
-                <svg viewBox="0 0 32 23" xmlns="http://www.w3.org/2000/svg" width="32" height="23" fill="none" viewBox="0 0 32 23"><path fill="#fff" d="M16.073 23q-4.873 0-8.291-3.342T4.364 11.5v-.252l-2.328 2.3L0 11.536l5.818-5.75 5.818 5.75L9.6 13.548l-2.327-2.3v.252q0 3.594 2.563 6.11 2.564 2.515 6.237 2.515.945 0 1.854-.216.909-.215 1.782-.646l2.182 2.156a12 12 0 0 1-2.836 1.186 11.3 11.3 0 0 1-2.982.395m10.109-5.786-5.818-5.75L22.4 9.452l2.327 2.3V11.5q0-3.594-2.563-6.11-2.564-2.514-6.237-2.515-.945 0-1.854.216a8.4 8.4 0 0 0-1.782.646l-2.182-2.156A12 12 0 0 1 12.945.395Q14.4 0 15.927 0q4.873 0 8.291 3.342t3.418 8.158v.252l2.328-2.3L32 11.464z"/></svg>
+                <svg viewBox="0 0 28 28" xmlns="http://www.w3.org/2000/svg" width="28" height="28" fill="none" viewBox="0 0 28 28"><path fill="#fff" d="M0 28V5.25L7 0l7 5.25v3.5h14V28zm2.625-2.625H5.25V22.75H2.625zm0-5.542H5.25v-2.625H2.625zm0-5.541H5.25v-2.625H2.625zm0-5.542H5.25V6.125H2.625zm6.125 0h2.625V6.125H8.75zm0 16.625h16.625v-14H8.75zm7.875-8.495v-2.625h6.125v2.625zm0 5.615V19.87h6.125v2.625zm-5.25-5.615v-2.625H14v2.625zm0 5.615V19.87H14v2.625z"/></svg>
             </div>
         </div>
         <div class="third onScreen">
@@ -127,13 +137,17 @@ get_header(); ?>
         <div class="bg onScreen"></div>
         <div class="text">
             <div class="inner">
-                <h2 class="green"><?php the_field('commitment_title'); ?></h2>
+                <?php the_field('commitment_title'); ?>
                 <?php the_field('commitment_description'); ?>
             </div>
         </div>
         <div class="imageWrapper">
             <div class="inner maskBottomLeft">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/rooted.jpg" alt="Everwaste - Powered by People">
+                <?php 
+                $commitment_image = get_field('commitment_image');
+                if($commitment_image): ?>
+                    <img src="<?php echo esc_url($commitment_image['url']); ?>" alt="<?php echo esc_attr($commitment_image['alt']); ?>">
+                <?php endif; ?>
             </div>
         </div>
     </div>

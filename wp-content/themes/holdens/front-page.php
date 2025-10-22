@@ -85,6 +85,7 @@ get_header(); ?>
                 </h3>
                 <div class="desc">
                     <?php the_field('service_description_1'); ?>
+                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/recover-recycle" class="button yellow">Learn more</a>
                 </div>
                 <div class="plus">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#fff" stroke-width="2" d="M8.199 0v16M0 7.796h16"/></svg>
@@ -96,7 +97,8 @@ get_header(); ?>
                     <div class="bg"></div>
                 </h3>
                 <div class="desc">
-                    <?php the_field('service_description_2'); ?>                    
+                    <?php the_field('service_description_2'); ?>
+                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/collections-skips" class="button yellow">Learn more</a>
                 </div>
                 <div class="plus">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#fff" stroke-width="2" d="M8.199 0v16M0 7.796h16"/></svg>
@@ -109,6 +111,7 @@ get_header(); ?>
                 </h3>
                 <div class="desc">
                     <?php the_field('service_description_3'); ?>
+                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/disposal-landfill" class="button yellow">Learn more</a>
                 </div>
                 <div class="plus">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#fff" stroke-width="2" d="M8.199 0v16M0 7.796h16"/></svg>
@@ -121,6 +124,7 @@ get_header(); ?>
                 </h3>
                 <div class="desc">
                     <?php the_field('service_description_4'); ?>                    
+                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/hazardous-waste-management" class="button yellow">Learn more</a>
                 </div>
                 <div class="plus">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#fff" stroke-width="2" d="M8.199 0v16M0 7.796h16"/></svg>
@@ -149,6 +153,7 @@ get_header(); ?>
             <div class="inner">
                 <?php the_field('rooted_title'); ?>
                 <?php the_field('rooted_description'); ?>
+                <a href="<?php echo esc_url(home_url('/')); ?>our-culture" class="button yellow">Learn more</a>
             </div>
         </div>
         <div class="imageWrapper">
@@ -204,6 +209,7 @@ get_header(); ?>
             <div class="inner">
                 <?php the_field('sustainability_title'); ?>
                 <?php the_field('sustainability_description'); ?>
+                <a href="<?php echo esc_url(home_url('/')); ?>sustainability" class="button yellow">Learn more</a>
             </div>
         </div>        
     </div>
@@ -230,27 +236,27 @@ get_header(); ?>
         </div>
     </div>
 </section>
-<section class="accreds">
+<!-- <section class="accreds">
     <div class="container">
         <div class="title">
-            <?php the_field('partnerships_title'); ?>
+            <?php // the_field('partnerships_title'); ?>
         </div>
         <div class="logos">
             <div class="logo onScreen">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/iso-9001.png" alt="BSI ISO 9001">
+                <img src="<?php // echo get_template_directory_uri(); ?>/assets/images/iso-9001.png" alt="BSI ISO 9001">
             </div>
             <div class="logo onScreen">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/safeContractor.png" alt="Alcumus Safe Contractor">
+                <img src="<?php // echo get_template_directory_uri(); ?>/assets/images/safeContractor.png" alt="Alcumus Safe Contractor">
             </div>
             <div class="logo onScreen">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/SSIP.png" alt="Assessed by a SSIP member scheme">
+                <img src="<?php // echo get_template_directory_uri(); ?>/assets/images/SSIP.png" alt="Assessed by a SSIP member scheme">
             </div>
             <div class="logo onScreen">
-                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/CIWM-Affiliated.png" alt="CIWM Affiliate Organisation 2024">
+                <img src="<?php // echo get_template_directory_uri(); ?>/assets/images/CIWM-Affiliated.png" alt="CIWM Affiliate Organisation 2024">
             </div>
         </div>
     </div>
-</section>
+</section> -->
 
 <?php include 'contactForm.php'; ?>
 

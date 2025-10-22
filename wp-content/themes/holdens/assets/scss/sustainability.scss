@@ -48,21 +48,12 @@ main {
                 position: absolute;
                 z-index: 1;
                 overflow: hidden;
-                width: 92vw;
-                height: 76vh;
-                max-height: 820px;
-                min-width: 100%;
+                width: 100%;
+                height: 100%;
                 top: 50%;
                 left: 50%;
                 transform: translate(-50%, -50%);
-                @media (min-width: $tablet) {
-                    width: 177.78vh;
-                    height: 100vh;
-                }
-                @media (min-width: $large) {
-                    min-width: 1500px;
-                    min-height: 820px;
-                }
+                
                 img {
                     width: 100%;
                     height: 100%;
@@ -228,28 +219,18 @@ main {
                 max-width: 65%;
             }
             @media (min-width: $large) {
-                max-width: 600px;
+                max-width: 700px;
                 // padding: 7rem 0;
             }
             .inner {
-                max-width: 440px;
+                max-width: 520px;
                 @media (min-width: $large) {
-                    max-width: 550px; 
+                    max-width: 650px; 
                 }
-                h3 {
-                    margin-top: 2rem;
-                }
-                h3 { 
-                    font-size: 18px;
-                    
-                    @media (min-width: $tablet) {
-                        font-size: 19px;
-                    }
-                    @media (min-width: $large) {
-                        font-size: 22px;
-                    }
-                    @media (min-width: $xlarge) {
-                        font-size: 24px;
+                h2 {
+                    strong {
+                        color: $green;
+                        font-weight: 600;
                     }
                 }
             }
@@ -331,7 +312,13 @@ main {
         .text {
             .inner {
                 @media (min-width: $large) {
-                    max-width: 500px;
+                    max-width: 600px;
+                }
+                h2 {
+                    strong {
+                        color: $green;
+                        font-weight: 600;
+                    }
                 }
                 p {
                     &:last-of-type {
@@ -371,7 +358,7 @@ main {
         }
         .bg {
             position: absolute;
-            background: linear-gradient(-130deg, #000833 25%, #1900FF 320%);
+            background: linear-gradient(-130deg, #000833 45%, #1900FF 160%);
             height: 100%;
             width: 45%;
             bottom: 0;
@@ -385,7 +372,7 @@ main {
             @media (min-width: 640px) {
                 // right: 68%;
                 right: auto;
-                width: 435px;
+                width: 1430px;
                 left: -13%;
             }
         
@@ -411,6 +398,12 @@ main {
             .inner {
                 @media (min-width: $large) {
                     max-width: 500px;
+                }
+                h2 {
+                    strong {
+                        color: $green;
+                        font-weight: 600;
+                    }
                 }
                 p {
                     &:last-of-type {

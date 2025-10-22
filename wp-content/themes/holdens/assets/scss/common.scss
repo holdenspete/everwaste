@@ -30,10 +30,16 @@ h1, h2, h3, h4, h5, h6 {
         font-weight: 600;
     }
     &.yellow {
-        color: $yellow;
+        strong {
+            font-weight: inherit;
+            color: $yellow;
+        }
     }
     &.green {
-        color: $green;
+        strong {
+            font-weight: inherit;
+            color: $green;
+        }
     }
     span {
         color: $yellow;
@@ -264,7 +270,7 @@ img {
                 @media (min-width: 640px) {
                     display: grid;
                     align-items: flex-start;
-                    grid-template-rows: 1fr 1fr;
+                    grid-template-rows: auto 1fr;
                     height: 88%;
                     justify-content: flex-start;
                     width: 100%;
@@ -295,7 +301,7 @@ img {
                     }
                     @media (min-width: $xlarge) {
                         font-size: 18px;
-                        max-width: 340px;
+                        max-width: 380px;
                     }
                 }
             }
@@ -348,7 +354,7 @@ img {
             border: 2px solid transparent;
             border-radius: 5px;
             display: flex;
-            padding: 30px 3rem 3rem 30px;
+            padding: 2.25rem 3rem 3rem 30px;
             flex-direction: column;
             align-items: flex-end;
             position: relative;
@@ -378,8 +384,7 @@ img {
             }
             @media (min-width: 1026px) {
                 padding: 30px 10px 3rem 30px;
-            }
-
+            }            
             @media (min-width: $large) {
                 transition: .3s ease;
                 opacity: 0;
@@ -399,7 +404,9 @@ img {
                     }
                 }
             }
-
+            @media (min-width: 1500px) {
+                padding: 30px 2rem 3rem 3rem;
+            }
             .text {
                 padding-right: 20px;
                 position: relative;
@@ -574,6 +581,7 @@ img {
 .contactFormSec {
     padding-bottom: 3rem;
     .container {
+        padding: 0 1rem;
         .inner {
             border-radius: 5px;
             padding: 3rem 2rem;
@@ -882,6 +890,36 @@ img {
             }
         }
     }
+    &.green {
+        color: $black;
+        position: relative;
+        height: 40px;
+        &:after {
+            content: "";
+            position: absolute;
+            z-index: -1;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            margin: auto;
+            background-color: $green;
+            height: 100%;
+            width: 100%;
+            transform: skewX(-35deg);
+            border-radius: 3px;
+            transition: transform 0.3s ease, border-radius 0.3s ease;
+            z-index: -1;
+        }
+        &:hover {
+            &:after {
+                @media (min-width: $large) {
+                    transform: skewX(0deg);
+                    border-radius: 12px;                    
+                }
+            }
+        }
+    }
     
     
     span {
@@ -1119,7 +1157,7 @@ img {
         margin-right: .5rem;
     }
 }
-.hero {
+.hero, .sustainHero {
     .container {
         padding-top: 1rem;
         padding-bottom: 1rem;
@@ -1189,5 +1227,16 @@ img {
   
     &:focus {
         left: 6px;
+    }
+}
+
+@keyframes shimmer {
+    0% {
+        opacity: 1;
+        transform: rotate(0deg);
+    }
+    100% {
+        opacity: 1;
+        transform: rotate(360deg);
     }
 }

@@ -81,7 +81,7 @@ header {
             a {
                 display: inline-flex;
                 align-items: center;
-                pointer-events: none;
+                
                 img {
                     max-height: 40px;
                     @media (min-width: $tablet) {

@@ -610,7 +610,7 @@ main {
         }
         .bg {
             position: absolute;
-            background: linear-gradient(-130deg, #000833 25%, #1900FF 320%);
+            background: linear-gradient(-130deg, #000833 25%, #1900FF 220%);
             height: 100%;
             width: 45%;
             bottom: 0;
@@ -624,7 +624,7 @@ main {
             @media (min-width: 640px) {
                 // right: 68%;
                 right: auto;
-                width: 435px;
+                width: 485px;
                 left: -13%;
             }
             // @media (min-width: $tablet) {
@@ -668,6 +668,10 @@ main {
                         }
                     }
                 }
+                .button {
+                    margin-left: 1rem;
+                    margin-top: 2rem;
+                }
             }
         }
     }
@@ -698,7 +702,7 @@ main {
         }
         .bg {
             position: absolute;
-            background: linear-gradient(-190deg, #000833 35%, #1900FF 320%);
+            background: linear-gradient(-190deg, #000833 35%, #1900FF 220%);
             height: 85%;
             width: 126%;
             bottom: -2rem;
@@ -726,9 +730,10 @@ main {
                 opacity: 0;
                 transition: .5s ease;
                 transition-delay: .35s;
+                width: 70%;
                 &.active {
-                    opacity: .7;
-                    left: 18%;
+                    opacity: 1;
+                    left: 30%;
                 }
             }
         }
@@ -754,6 +759,10 @@ main {
                             margin-bottom: 0;
                         }
                     }
+                }
+                .button {
+                    margin-left: 1rem;
+                    margin-top: 2rem;
                 }
             }
         }
@@ -863,6 +872,9 @@ main {
                     }
                     .desc {
                         opacity: 1;
+                        .button {
+                            pointer-events: all;
+                        }
                     }
                     h3 {
                         span {
@@ -1013,6 +1025,11 @@ main {
                         @media (min-width: $large) {
                             font-size: 1rem;
                         }
+                    }
+                    .button {
+                        margin-left: 1rem;
+                        margin-top: 1rem;
+                        pointer-events: none;
                     }
                 }
                 img {
@@ -1234,13 +1251,13 @@ main {
     }
 }
 
-@keyframes shimmer {
-    0% {
-        opacity: 1;
-        transform: rotate(0deg);
-    }
-    100% {
-        opacity: 1;
-        transform: rotate(360deg);
+.halves {
+    .container {
+        .half {
+            .text {
+                margin-right: auto;
+                max-width: 400px;
+            }
+        }
     }
 }
