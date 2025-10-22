@@ -115,6 +115,7 @@ function holdens_enqueue_page_styles() {
         'page-sustainability' => 'sustainability',
         'page-our-culture' => 'our-culture',
         'page-about-us' => 'about-us',
+        'page-our-services' => 'our-services',
         'page-contact-us' => 'contact-us',
         'single' => 'single',
         'archive' => 'archive',

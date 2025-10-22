@@ -309,11 +309,8 @@ main {
             }
             .testimonialsWrapper {
                 align-items: stretch;
-                margin: 4rem 0 0;
+                margin: 4rem -.5rem 0;
                 position: relative;
-                @media (min-width: $tablet) {
-                    margin: 4rem -.5rem 0;
-                }
 
                 .slick-track {
                     @media (min-width: $tablet) {
@@ -345,8 +342,8 @@ main {
                     display: grid;
                     align-items: stretch;
                     min-height: 100%;
+                    margin: 0 .5rem;
                     @media (min-width: $tablet) {
-                        margin: 0 .5rem;
                         display: flex;
                         flex-direction: column;
                         height: 100%;

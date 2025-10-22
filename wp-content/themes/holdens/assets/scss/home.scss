@@ -586,6 +586,9 @@ main {
     // }
     .container {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 2.5rem;
         @media (min-width: $tablet) {
             display: grid;
             gap: 1rem;
@@ -617,11 +620,12 @@ main {
             right: 66%;
             z-index: -1;
             transform: skew(35deg);
-            @media (max-width: 639px) {
+            @media (max-width: 767px) {
                 width: 115%;
-                right: 0%;
+                right: 20%;
+                bottom: 10%;
             }
-            @media (min-width: 640px) {
+            @media (min-width: $tablet) {
                 // right: 68%;
                 right: auto;
                 width: 485px;
@@ -670,7 +674,7 @@ main {
                 }
                 .button {
                     margin-left: 1rem;
-                    margin-top: 2rem;
+                    margin-top: 1rem;
                 }
             }
         }
@@ -684,6 +688,9 @@ main {
     // }
     .container {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
         @media (min-width: $tablet) {
             display: grid;
             gap: 1rem;
@@ -709,10 +716,8 @@ main {
             left: 4%;
             z-index: -1;
             transform: skew(-35deg);
-            @media (min-width: 401px) {
-                left: 0%;
-                width: 126%;
-                bottom: -2rem;
+            @media (max-width: 767px) {
+                background: linear-gradient(60deg, #000833 35%, #1900FF 220%);
             }
             
             @media (min-width: $tablet) {
@@ -762,7 +767,7 @@ main {
                 }
                 .button {
                     margin-left: 1rem;
-                    margin-top: 2rem;
+                    margin-top: 1rem;
                 }
             }
         }

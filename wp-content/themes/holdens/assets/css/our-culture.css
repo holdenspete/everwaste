@@ -121,7 +121,7 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   margin-top: 0;
   font-size: 26px;
 }
@@ -408,7 +408,7 @@ img {
   border: 2px solid transparent;
   border-radius: 5px;
   display: flex;
-  padding: 30px 3rem 3rem 30px;
+  padding: 2.25rem 3rem 3rem 30px;
   flex-direction: column;
   align-items: flex-end;
   position: relative;
@@ -548,7 +548,7 @@ img {
 .imageWrapper .inner.maskBottomRight {
   aspect-ratio: 887/567;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   border-radius: 5px;
 }
 @media (min-width: 768px) {
@@ -569,7 +569,7 @@ img {
 .imageWrapper .inner.maskBottomLeft {
   aspect-ratio: 833/564;
   overflow: hidden;
-  margin-top: 2rem;
+  margin-top: 0;
   border-radius: 5px;
 }
 @media (min-width: 768px) {
@@ -968,7 +968,12 @@ img {
   padding: 0.75rem 1.5rem;
   word-spacing: normal;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+  .btn, .button {
+    font-size: 1rem;
+  }
 }
 @media (min-width: 1100px) {
   .btn, .button {
@@ -1002,6 +1007,34 @@ img {
 }
 @media (min-width: 1100px) {
   .btn.yellow:hover:after, .button.yellow:hover:after {
+    transform: skewX(0deg);
+    border-radius: 12px;
+  }
+}
+.btn.green, .button.green {
+  color: #0C070A;
+  position: relative;
+  height: 40px;
+}
+.btn.green:after, .button.green:after {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  margin: auto;
+  background-color: #5CD47C;
+  height: 100%;
+  width: 100%;
+  transform: skewX(-35deg);
+  border-radius: 3px;
+  transition: transform 0.3s ease, border-radius 0.3s ease;
+  z-index: -1;
+}
+@media (min-width: 1100px) {
+  .btn.green:hover:after, .button.green:hover:after {
     transform: skewX(0deg);
     border-radius: 12px;
   }
@@ -1736,13 +1769,8 @@ main {
 }
 .testimonials .container .containerInner .testimonialsWrapper {
   align-items: stretch;
-  margin: 4rem 0 0;
+  margin: 4rem -0.5rem 0;
   position: relative;
-}
-@media (min-width: 768px) {
-  .testimonials .container .containerInner .testimonialsWrapper {
-    margin: 4rem -0.5rem 0;
-  }
 }
 @media (min-width: 768px) {
   .testimonials .container .containerInner .testimonialsWrapper .slick-track {
@@ -1768,10 +1796,10 @@ main {
   display: grid;
   align-items: stretch;
   min-height: 100%;
+  margin: 0 0.5rem;
 }
 @media (min-width: 768px) {
   .testimonials .container .containerInner .testimonialsWrapper .testimonial {
-    margin: 0 0.5rem;
     display: flex;
     flex-direction: column;
     height: 100%;

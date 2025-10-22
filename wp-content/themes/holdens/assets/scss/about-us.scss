@@ -9,6 +9,9 @@ main {
     overflow: hidden;
     .container {
         position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
         @media (min-width: $tablet) {
             display: grid;
             gap: 1rem;
@@ -184,14 +187,14 @@ main {
             right: 66%;
             z-index: -1;
             transform: skew(35deg);
-            @media (max-width: 639px) {
+            @media (max-width: 767px) {
                 width: 115%;
                 right: 27%;
                 bottom: auto;
                 top: 0;
                 height: 83%;
             }
-            @media (min-width: 640px) {
+            @media (min-width: $tablet) {
                 // right: 68%;
                 right: auto;
                 width: 495px;
@@ -282,10 +285,8 @@ main {
             left: 4%;
             z-index: -1;
             transform: skew(-35deg);
-            @media (min-width: 401px) {
-                left: 0%;
-                width: 126%;
-                top: -2rem;
+            @media (max-width: 767px) {
+                background: linear-gradient(-220deg, #000833 35%, #1900FF 165%);
             }
             
             @media (min-width: $tablet) {
@@ -376,11 +377,14 @@ main {
             right: 66%;
             z-index: -1;
             transform: skew(35deg);
-            @media (max-width: 639px) {
+            @media (max-width: 767px) {
                 width: 115%;
-                right: 0%;
+                height: 100%;
+                bottom: 20%;
+                right: 16%;
+                background: linear-gradient(-125deg, #000833 45%, #1900FF 120%);
             }
-            @media (min-width: 640px) {
+            @media (min-width: $tablet) {
                 // right: 68%;
                 right: auto;
                 width: 1430px;

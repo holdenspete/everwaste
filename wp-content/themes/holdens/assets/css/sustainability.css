@@ -121,7 +121,7 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   margin-top: 0;
   font-size: 26px;
 }
@@ -408,7 +408,7 @@ img {
   border: 2px solid transparent;
   border-radius: 5px;
   display: flex;
-  padding: 30px 3rem 3rem 30px;
+  padding: 2.25rem 3rem 3rem 30px;
   flex-direction: column;
   align-items: flex-end;
   position: relative;
@@ -548,7 +548,7 @@ img {
 .imageWrapper .inner.maskBottomRight {
   aspect-ratio: 887/567;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   border-radius: 5px;
 }
 @media (min-width: 768px) {
@@ -569,7 +569,7 @@ img {
 .imageWrapper .inner.maskBottomLeft {
   aspect-ratio: 833/564;
   overflow: hidden;
-  margin-top: 2rem;
+  margin-top: 0;
   border-radius: 5px;
 }
 @media (min-width: 768px) {
@@ -968,7 +968,12 @@ img {
   padding: 0.75rem 1.5rem;
   word-spacing: normal;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+  .btn, .button {
+    font-size: 1rem;
+  }
 }
 @media (min-width: 1100px) {
   .btn, .button {
@@ -1653,10 +1658,11 @@ main {
   }
 }
 .sustainAbout .container .text {
-  padding: 5rem 0;
+  padding: 4.5rem 0 1rem;
 }
 @media (min-width: 768px) {
   .sustainAbout .container .text {
+    padding: 5rem 0;
     max-width: 65%;
   }
 }
@@ -1684,6 +1690,9 @@ main {
 }
 .sustainExample .container {
   position: relative;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .sustainExample .container {
@@ -1714,11 +1723,10 @@ main {
   z-index: -1;
   transform: skew(-35deg);
 }
-@media (min-width: 401px) {
+@media (max-width: 767px) {
   .sustainExample .container .bg {
-    left: 0%;
-    width: 126%;
-    bottom: -2rem;
+    background: linear-gradient(280deg, #000833 35%, #1900FF 220%);
+    left: -21%;
   }
 }
 @media (min-width: 768px) {
@@ -1777,6 +1785,9 @@ main {
 }
 .sustainRooted .container {
   position: relative;
+  display: flex;
+  gap: 1.5rem;
+  flex-direction: column;
 }
 @media (min-width: 768px) {
   .sustainRooted .container {
@@ -1844,6 +1855,11 @@ main {
 }
 .sustainRooted .container .text {
   position: relative;
+}
+@media (min-width: 768px) {
+  .sustainRooted .container .text {
+    margin: 1rem 0;
+  }
 }
 @media (min-width: 1100px) {
   .sustainRooted .container .text .inner {

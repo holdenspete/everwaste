@@ -121,7 +121,7 @@ h1 {
 }
 
 h2 {
-  margin-bottom: 2rem;
+  margin-bottom: 2.5rem;
   margin-top: 0;
   font-size: 26px;
 }
@@ -548,7 +548,7 @@ img {
 .imageWrapper .inner.maskBottomRight {
   aspect-ratio: 887/567;
   overflow: hidden;
-  margin-bottom: 2rem;
+  margin-bottom: 0;
   border-radius: 5px;
 }
 @media (min-width: 768px) {
@@ -569,7 +569,7 @@ img {
 .imageWrapper .inner.maskBottomLeft {
   aspect-ratio: 833/564;
   overflow: hidden;
-  margin-top: 2rem;
+  margin-top: 0;
   border-radius: 5px;
 }
 @media (min-width: 768px) {
@@ -968,7 +968,12 @@ img {
   padding: 0.75rem 1.5rem;
   word-spacing: normal;
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.9rem;
+}
+@media (min-width: 768px) {
+  .btn, .button {
+    font-size: 1rem;
+  }
 }
 @media (min-width: 1100px) {
   .btn, .button {
@@ -2101,6 +2106,9 @@ main {
 }
 .rooted .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 2.5rem;
 }
 @media (min-width: 768px) {
   .rooted .container {
@@ -2136,13 +2144,14 @@ main {
   z-index: -1;
   transform: skew(35deg);
 }
-@media (max-width: 639px) {
+@media (max-width: 767px) {
   .rooted .container .bg {
     width: 115%;
-    right: 0%;
+    right: 20%;
+    bottom: 10%;
   }
 }
-@media (min-width: 640px) {
+@media (min-width: 768px) {
   .rooted .container .bg {
     right: auto;
     width: 485px;
@@ -2181,7 +2190,7 @@ main {
 }
 .rooted .container .text .inner .button {
   margin-left: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .example {
@@ -2190,6 +2199,9 @@ main {
 }
 .example .container {
   position: relative;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
 }
 @media (min-width: 768px) {
   .example .container {
@@ -2220,11 +2232,9 @@ main {
   z-index: -1;
   transform: skew(-35deg);
 }
-@media (min-width: 401px) {
+@media (max-width: 767px) {
   .example .container .bg {
-    left: 0%;
-    width: 126%;
-    bottom: -2rem;
+    background: linear-gradient(60deg, #000833 35%, #1900FF 220%);
   }
 }
 @media (min-width: 768px) {
@@ -2275,7 +2285,7 @@ main {
 }
 .example .container .text .inner .button {
   margin-left: 1rem;
-  margin-top: 2rem;
+  margin-top: 1rem;
 }
 
 .services {
