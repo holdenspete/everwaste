@@ -63,6 +63,8 @@
     <?php wp_footer(); ?>
     <script>
     document.addEventListener('DOMContentLoaded', function() {
+
+        // mobile burger nav
         var burger = document.querySelector('.burger');
         if (burger) {
             burger.addEventListener('click', function() {
@@ -119,6 +121,71 @@
             
             lastScrollPosition = currentScroll;
         });
+
+        if (!header) return;
+
+        const mq = window.matchMedia('(min-width: 1100px)');
+
+        function onOver(e) {
+            if (!mq.matches) return;
+            const li = e.target.closest('.menu-item-168');
+            if (!li || !header.contains(li)) return;
+            li.classList.add('active');
+        }
+
+        function onOut(e) {
+            if (!mq.matches) return;
+            const li = e.target.closest('.menu-item-168');
+            if (!li || !header.contains(li)) return;
+            // avoid removing when moving between children inside the LI
+            if (li.contains(e.relatedTarget)) return;
+            li.classList.remove('active');
+        }
+
+        header.addEventListener('mouseover', onOver);
+        header.addEventListener('mouseout', onOut);
+
+        // If your theme hot-swaps the header element itself:
+        const mo = new MutationObserver(() => {
+            const newHeader = document.querySelector('header');
+            if (newHeader && newHeader !== header) {
+            header.removeEventListener('mouseover', onOver);
+            header.removeEventListener('mouseout', onOut);
+            newHeader.addEventListener('mouseover', onOver);
+            newHeader.addEventListener('mouseout', onOut);
+            }
+        });
+        mo.observe(document.body, { childList: true, subtree: true });
+
+        // add bg div for border
+
+        function injectBorderLi() {
+            // clean up existing ones first
+            document.querySelectorAll('header .menu-item-168 .sub-menu li.border').forEach(li => li.remove());
+
+            if (!mq.matches) return;
+
+            document.querySelectorAll('header .menu-item-168 .sub-menu').forEach(subMenu => {
+            const borderLi = document.createElement('li');
+            borderLi.className = 'border';
+            borderLi.setAttribute('aria-hidden', 'true');
+            subMenu.appendChild(borderLi);
+            });
+        }
+
+        // run now + whenever screen crosses breakpoint
+        injectBorderLi();
+        mq.addEventListener('change', injectBorderLi);
+
+        // Handle mobile menu dropdown
+        const dropdownLink = document.querySelector('.menu-item-168');
+        if (dropdownLink) {
+            dropdownLink.addEventListener('click', function(e) {
+                if (window.innerWidth < 1100) {
+                    this.parentElement.classList.toggle('clicked');
+                }
+            });
+        }
     });
     </script>
 </body>

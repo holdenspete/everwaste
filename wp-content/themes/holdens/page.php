@@ -47,7 +47,7 @@ h1 {
     <section class="page-hero" style="opacity:0;transform:translateY(50px);">
         <div class="container">
             <div class="page-hero-content">
-                <h1 class="page-title"><?php the_title(); ?></h1>
+                <h1 class="page-title"><?php the_title(); ?>.</h1>
             </div>
         </div>
     </section>

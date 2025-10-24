@@ -1,103 +1,114 @@
 @import 'common';
 
-.places {
-    padding-bottom: 3rem;
+main {
+    padding-top: 76px;   
+}
+
+.aboutHero {
+    padding: 3rem 0;
+    overflow: hidden;
     .container {
-        gap: 1rem;
-        display: grid;
-        .place {
-            > div {
-                aspect-ratio: 1 / 1;
-                height: 100%;
-                width: 100%;
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        gap: 1.5rem;
+        @media (min-width: $tablet) {
+            display: grid;
+            gap: 1rem;
+            grid-template-columns: auto 55%;
+            align-items: center;
+            padding-right: 1rem;
+        }
+        @media (min-width: $xxlarge) {
+            grid-template-columns: auto 60%;
+        }
+        
+        .imageWrapper {
+            @media (min-width: $tablet) {
+                margin-right: -5rem;
+            }
+            @media (min-width: $large) {
+                margin-right: 0;
+            }
+        }
+        .bg {
+            position: absolute;
+            background: linear-gradient(-148deg, #000833 50%, #1900FF 150%);
+            height: 100%;
+            width: 45%;
+            bottom: 0;
+            right: 66%;
+            z-index: -1;
+            transform: skew(35deg);
+            @media (max-width: 639px) {
+                width: 115%;
+                right: 0%;
+                opacity: 0!important;
             }
             @media (min-width: 640px) {
-                display: grid;
-                gap: 1rem;
-                grid-template-columns: 1fr 1fr;
+                // right: 68%;
+                right: auto;
+                width: 58%;
+                left: 1100px;
+            }
+            @media (min-width: 1000px) {
+                width: 52%;
             }
             
-            .text {
-                background-color: #102210;
-                border-radius: 30px;
-                padding: 1.25rem;
-                display: flex;
-                flex-direction: column;
-                justify-content: space-between;
-                aspect-ratio: 1 / 1.1;
-                color: $white;
-                @media (min-width: 640px) {
-                    width: 100%;
-                }
-                @media (min-width: $tablet) {
-                    aspect-ratio: 1 / 1;
-                }
-              
-
-                h2 {
-                    font-size: clamp(23px, 3.7vw, 35px);
-                    margin: 0 0 1rem;
-                }
-               
-                .email {
-                    font-family: "Antonio", Georgia, serif;
-                    font-size: clamp(25px, 4vw, 46px);
-                    font-weight: 700;
-                    color: $white;
-                    text-decoration: none;
-                }
-                a {
-
-                }
-                .bottom {
-                    display: flex;
-                    flex-direction: column;
-                    gap: 2rem;
+            @media (min-width: $large) {
+                left: 1400px;
+            }
+            @media (min-width: $xxlarge) {
+                width: 50%;
+            }
+           
+        }
+        .imageWrapper {
+            .inner {
+                &.maskBottomLeft {
                     @media (min-width: $tablet) {
-                        gap: 1rem;                        
+                        margin-top: 0;
                     }
-                    @media (min-width: $large) {
-                        flex-direction: row;
-                        justify-content: space-between;
-                        align-items: flex-end;
+                }
+            }
+        }
+        .text {
+            position: relative;
+            .inner {
+                @media (min-width: $large) {
+                    max-width: 640px;
+                }
+                h1 {
+                    margin-bottom: 2rem;
+                    strong {
+                        color: $yellow;
+                        font-weight: 600;
                     }
-                    .button {
-                        width: fit-content;
-                        min-width: fit-content;
-                        height: fit-content;
-                        background-color: $pink;           
-                        
+                }
+                p {
+                    &:last-of-type {
+                        @media (min-width: $tablet) {
+                            margin-bottom: 0;
+                        }
+                    }
+                }
+                .email {
+                    margin-top: 3rem;
+                    a {
+                        display: inline-flex;
+                        align-items: center;
                         @media (min-width: $large) {
                             &:hover {
-                                background-color: $greenCard;           
+                                color: $yellow;
                             }
                         }
-                    
-                    }
-                    p {
-                        margin: 0;
+
+                        svg {
+                            margin-right: 1rem;
+                        }
                     }
                 }
             }
-            .imageWrapper {
-                display: none;
-                @media (min-width: 640px) {
-                    border-radius: 30px;
-                    overflow: hidden;
-                    display: block;
-                    width: 100%;
-                    aspect-ratio: 1 / 1.1;
-                }
-                @media (min-width: $tablet) {
-                    aspect-ratio: 1 / 1;
-                }
-                img {
-                    width: 100%;
-                    height: 100%;
-                    object-fit: cover;
-                }
-            }
-            
         }
     }
 }

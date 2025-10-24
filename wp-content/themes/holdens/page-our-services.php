@@ -26,7 +26,7 @@ get_header(); ?>
             <div class="text">
                 <div class="shape" style="right: 150%;"></div>
                 <div class="inner" style="opacity: 0;">                    
-                    <h1><?php the_field('hero_title'); ?></h1>
+                    <?php the_field('hero_title'); ?>
                     <?php the_field('hero_description'); ?>
                 </div>
             </div>
@@ -42,7 +42,7 @@ get_header(); ?>
             <div class="inner">
                 <?php the_field('recovery_title'); ?>
                 <?php the_field('recovery_description'); ?>
-                <a href="<?php echo esc_url(home_url('/')); ?>our-services/recover-recycle" class="button yellow">Learn more</a>
+                <a href="<?php echo esc_url(home_url('/')); ?>our-services/waste-recovery-recycling" class="button yellow">Learn more</a>
             </div>
         </div>
         <div class="imageWrapper">
@@ -73,7 +73,7 @@ get_header(); ?>
             <div class="inner">
                 <?php the_field('landfill_title'); ?>
                 <?php the_field('landfill_description'); ?>
-                <a href="<?php echo esc_url(home_url('/')); ?>our-services/disposal-landfill" class="button yellow">Learn more</a>
+                <a href="<?php echo esc_url(home_url('/')); ?>our-services/waste-disposal-landfill" class="button yellow">Learn more</a>
             </div>
         </div>        
     </div>
@@ -117,9 +117,19 @@ get_header(); ?>
             <div class="inner">
                 <?php the_field('collections_title'); ?>
                 <?php the_field('collections_description'); ?>
-                <a href="<?php echo esc_url(home_url('/')); ?>our-services/collections-skips" class="button yellow">Learn more</a>
+                <a href="<?php echo esc_url(home_url('/')); ?>our-services/waste-collections-skips" class="button yellow">Learn more</a>
             </div>
         </div>        
+    </div>
+</section>
+
+<section class="map">
+    <div class="container">
+        <div class="titleWrapper">
+            <?php the_field('operate_title'); ?>
+            <?php the_field('operate_description'); ?>
+        </div>
+        <?php include 'map.php'; ?>
     </div>
 </section>
 

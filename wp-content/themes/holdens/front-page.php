@@ -85,7 +85,7 @@ get_header(); ?>
                 </h3>
                 <div class="desc">
                     <?php the_field('service_description_1'); ?>
-                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/recover-recycle" class="button yellow">Learn more</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/waste-recovery-recycling" class="button yellow">Learn more</a>
                 </div>
                 <div class="plus">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#fff" stroke-width="2" d="M8.199 0v16M0 7.796h16"/></svg>
@@ -98,7 +98,7 @@ get_header(); ?>
                 </h3>
                 <div class="desc">
                     <?php the_field('service_description_2'); ?>
-                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/collections-skips" class="button yellow">Learn more</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/waste-collections-skips" class="button yellow">Learn more</a>
                 </div>
                 <div class="plus">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#fff" stroke-width="2" d="M8.199 0v16M0 7.796h16"/></svg>
@@ -111,7 +111,7 @@ get_header(); ?>
                 </h3>
                 <div class="desc">
                     <?php the_field('service_description_3'); ?>
-                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/disposal-landfill" class="button yellow">Learn more</a>
+                    <a href="<?php echo esc_url(home_url('/')); ?>our-services/waste-disposal-landfill" class="button yellow">Learn more</a>
                 </div>
                 <div class="plus">
                     <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="none"><path stroke="#fff" stroke-width="2" d="M8.199 0v16M0 7.796h16"/></svg>

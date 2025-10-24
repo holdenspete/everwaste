@@ -105,6 +105,27 @@ function holdens_enqueue_scripts() {
 }
 add_action('wp_enqueue_scripts', 'holdens_enqueue_scripts');
 
+// Assign page-service.php template to children of "Our Services" page
+function holdens_assign_service_template($template) {
+    if (is_page()) {
+        $post = get_post();
+        
+        // Get the "Our Services" page ID (adjust the slug if different)
+        $our_services_page = get_page_by_path('our-services');
+        
+        if ($our_services_page && $post->post_parent == $our_services_page->ID) {
+            // This is a child of "Our Services"
+            $new_template = locate_template(array('page-service.php'));
+            if ($new_template) {
+                return $new_template;
+            }
+        }
+    }
+    
+    return $template;
+}
+add_filter('template_include', 'holdens_assign_service_template');
+
 // Enqueue page-specific styles based on template
 function holdens_enqueue_page_styles() {
     $template_name = get_current_template_name();
@@ -122,8 +143,15 @@ function holdens_enqueue_page_styles() {
         'index' => 'blog'
     );
 
-    // Default to template name if not in map
-    $css_file = isset($template_styles[$template_name]) ? $template_styles[$template_name] : $template_name;
+    // Handle page-service template (used by child pages of "Our Services")
+    if ($template_name === 'page-service') {
+        // Get the current page slug to use as CSS filename
+        $css_file = 'service';
+    } else {
+        // Default to template name if not in map
+        $css_file = isset($template_styles[$template_name]) ? $template_styles[$template_name] : $template_name;
+    }
+    
     $css_path = ASSETS_URL . '/css/' . $css_file . '.css';
 
     // Check if file exists before enqueuing

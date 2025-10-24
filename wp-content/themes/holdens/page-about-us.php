@@ -94,8 +94,17 @@ get_header(); ?>
         <div class="bg onScreen"></div>
         <div class="text">
             <div class="inner">
-                <?php the_field('powered_title'); ?>
-                <?php the_field('powered_description'); ?>
+                <?php 
+                $powered_title = get_field('powered_title');
+                $powered_description = get_field('powered_description');
+          
+                if($powered_title) {
+                    echo $powered_title;
+                }
+                if($powered_description) {
+                    echo $powered_description;
+                }
+                ?>
             </div>
         </div>
         <div class="imageWrapper">
