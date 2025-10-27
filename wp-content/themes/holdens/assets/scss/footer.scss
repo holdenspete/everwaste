@@ -104,6 +104,13 @@ footer {
                     }
                     li {
                         font-weight: 400;
+                        .sub-menu {
+                            display: none;
+                        }
+                        &:last-of-type {
+                            display: none;
+
+                        }
                     }
                 }
                 .thirdsWrapper {

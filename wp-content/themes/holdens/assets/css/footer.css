@@ -137,6 +137,12 @@ footer .container .top .right .nav-menu {
 footer .container .top .right .nav-menu li {
   font-weight: 400;
 }
+footer .container .top .right .nav-menu li .sub-menu {
+  display: none;
+}
+footer .container .top .right .nav-menu li:last-of-type {
+  display: none;
+}
 @media (min-width: 640px) {
   footer .container .top .right .thirdsWrapper {
     display: grid;

@@ -750,7 +750,7 @@ img {
 .contactFormSec .container .inner .bottom {
   display: grid;
   grid-template-columns: 1fr;
-  gap: 4rem;
+  gap: 2rem;
   position: relative;
   z-index: 3;
 }
@@ -763,6 +763,14 @@ img {
 @media (min-width: 1100px) {
   .contactFormSec .container .inner .bottom {
     gap: 4rem;
+  }
+}
+.contactFormSec .container .inner .bottom .form {
+  order: 2;
+}
+@media (min-width: 768px) {
+  .contactFormSec .container .inner .bottom .form {
+    order: unset;
   }
 }
 .contactFormSec .container .inner .bottom form {
@@ -852,7 +860,7 @@ img {
 .contactFormSec .container .inner .bottom .text h2 {
   color: #FFEE00;
   font-size: 26px;
-  margin-bottom: 3rem;
+  margin-bottom: 2rem;
 }
 @media (min-width: 768px) {
   .contactFormSec .container .inner .bottom .text h2 {
@@ -1827,10 +1835,11 @@ main {
   }
 }
 .serviceAbout .container .text {
-  padding: 5rem 0;
+  padding: 5rem 0 2rem;
 }
 @media (min-width: 768px) {
   .serviceAbout .container .text {
+    padding: 5rem 0;
     max-width: 65%;
   }
 }
@@ -1845,6 +1854,11 @@ main {
 @media (min-width: 1100px) {
   .serviceAbout .container .text .inner {
     max-width: 650px;
+  }
+}
+@media (max-width: 400px) {
+  .serviceAbout .container .text .inner h2 {
+    max-width: 270px;
   }
 }
 .serviceAbout .container .text .inner h2 strong {
@@ -2142,6 +2156,11 @@ main {
   margin-bottom: 2rem;
   color: #FFEE00;
 }
+@media (max-width: 500px) {
+  .why .container .inner .title h3 {
+    max-width: 270px;
+  }
+}
 @media (min-width: 768px) {
   .why .container .inner .title h3 {
     font-size: 32px;
@@ -2175,12 +2194,13 @@ main {
   }
 }
 .why .container .inner .bottom ul {
-  padding-left: 4.5rem;
+  padding-left: 3.5rem;
   margin-top: 3rem;
   margin-bottom: 0;
 }
 @media (min-width: 768px) {
   .why .container .inner .bottom ul {
+    padding-left: 4.5rem;
     columns: 2;
     column-gap: 10rem;
   }
@@ -2205,12 +2225,18 @@ main {
   content: "";
   top: 0.5rem;
   transform: skew(-30deg);
-  left: -4.5rem;
+  left: -3.5rem;
   height: 8px;
-  width: 40px;
+  width: 30px;
   border-radius: 2px;
   position: absolute;
   background-color: #2A00FF;
+}
+@media (min-width: 768px) {
+  .why .container .inner .bottom ul li:before {
+    left: -4.5rem;
+    width: 40px;
+  }
 }
 @media (min-width: 1100px) {
   .why .container .inner .bottom ul li:before {
@@ -2219,4 +2245,8 @@ main {
     height: 10px;
     width: 50px;
   }
+}
+
+.page-id-12 .sustainHero .container .videoWrapper .bgImage img.heroTab {
+  object-position: top;
 }/*# sourceMappingURL=service.css.map */

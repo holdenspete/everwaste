@@ -229,6 +229,9 @@ main {
                     max-width: 650px; 
                 }
                 h2 {
+                    @media (max-width: 450px) {
+                        max-width: 245px;
+                    }
                     strong {
                         color: $green;
                         font-weight: 600;
@@ -428,4 +431,19 @@ main {
 
 .thirds .container .third::after {
     background: linear-gradient(30deg, #000833 25%, #5CD47C 75%);
+}
+.page-id-19 {
+    .sustainHero {
+        .container {
+            .videoWrapper {
+                .bgImage {
+                    img {
+                        &.heroTab {
+                            object-position: bottom;
+                        }
+                    }
+                }
+            }
+        }
+    }
 }
