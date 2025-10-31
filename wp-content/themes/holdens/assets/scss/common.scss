@@ -729,7 +729,7 @@ img {
                                 &:after {
                                     @media (min-width: $large) {
                                         transform: skewX(0deg);
-                                        border-radius: 12px;                    
+                                        border-radius: 3px;                    
                                     }
                                 }
                             }
@@ -755,6 +755,16 @@ img {
                     }
                 }
                 .text {
+                    @media (min-width: $tablet) {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: center;
+                        padding-bottom: 4rem;
+                    }
+                    @media (min-width: $xlarge) {
+                        padding-bottom: 2rem;
+
+                    }
                     h2 {
                         color: $yellow;
                         font-size: 26px;  
@@ -893,7 +903,7 @@ img {
             &:after {
                 @media (min-width: $large) {
                     transform: skewX(0deg);
-                    border-radius: 12px;                    
+                    // border-radius: 3px;                    
                 }
             }
         }
@@ -923,7 +933,7 @@ img {
             &:after {
                 @media (min-width: $large) {
                     transform: skewX(0deg);
-                    border-radius: 12px;                    
+                    // border-radius: 12px;                    
                 }
             }
         }

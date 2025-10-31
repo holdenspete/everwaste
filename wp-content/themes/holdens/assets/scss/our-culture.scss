@@ -130,7 +130,7 @@ main {
                     z-index: 0;
                     
                     @media (min-width: $tablet) {
-                        border-radius: 2rem;
+                        border-radius: 2rem 3.5rem 1rem 2rem;
                         transform: skew(-35deg);
                     }
                 }
@@ -172,7 +172,7 @@ main {
                             max-width: 420px;
                         }
                         @media (min-width: $large) {
-                            max-width: 485px;
+                            max-width: 500px;
                         }
                     }
                 }
@@ -522,6 +522,29 @@ main {
                         }
                     }
                 }
+            }
+        }
+    }
+}
+
+.halves {
+    .container {
+        .half {            
+            &:nth-of-type(1) {
+                .text {
+                    @media (min-width: $large) {
+                        max-width: 540px;
+                        margin-right: auto;
+                    }  
+                }
+            }
+            &:nth-of-type(2) {
+                .text {
+                    @media (min-width: $large) {
+                        max-width: 480px;
+                        margin-right: auto;
+                    }  
+                }  
             }
         }
     }

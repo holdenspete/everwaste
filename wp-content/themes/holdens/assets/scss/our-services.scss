@@ -125,7 +125,7 @@ main {
                     z-index: 0;
                     
                     @media (min-width: $tablet) {
-                        border-radius: 2rem;
+                        border-radius: 2rem 3.5rem 1rem 2rem;
                         transform: skew(-35deg);
                     }
                 }
@@ -150,7 +150,12 @@ main {
                         margin: 0;
                     }
                     h1 {
+                        @media (min-width: $tablet) {
+
+                            max-width: 420px;
+                        }
                         @media (min-width: $large) {
+                            max-width: 450px;
                             font-size: 36px;
                         }
                         @media (min-width: $xlarge) {
@@ -164,6 +169,9 @@ main {
                         }
                         @media (min-width: $large) {
                             max-width: 455px;
+                        }
+                        @media (min-width: $xxlarge) {
+                            max-width: 555px;
                         }
                     }
                 }
@@ -238,7 +246,7 @@ main {
             position: relative;
             .inner {
                 @media (min-width: $large) {
-                    max-width: 500px;
+                    max-width: 531px;
                 }
                 p {
                     &:last-of-type {
@@ -531,7 +539,7 @@ main {
         .text {
             .inner {
                 @media (min-width: $large) {
-                    max-width: 500px;
+                    max-width: 525px;
                 }
                 p {
                     &:last-of-type {

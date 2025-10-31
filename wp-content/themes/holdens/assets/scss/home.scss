@@ -96,8 +96,8 @@ main {
                 min-width: 100%;
                 max-height: 820px;
                 &.mobVid {
-                    width: 98vw;
-                    height: 84vh;
+                    width: 102vw;
+                    height: 90vh;
                     @media (min-width: 460px) {
                         display: none;
                     }
@@ -138,7 +138,7 @@ main {
                     z-index: 0;
                     
                     @media (min-width: $tablet) {
-                        border-radius: 2rem;
+                        border-radius: 2rem 3.5rem 1rem 2rem;
                         transform: skew(-35deg);
                     }
                 }
@@ -675,6 +675,10 @@ main {
                 .button {
                     margin-left: 1rem;
                     margin-top: 1rem;
+                    @media (min-width: $tablet) {
+                        margin-bottom: 1rem;
+                        margin-top: 2rem;
+                    }
                 }
             }
         }
@@ -768,13 +772,29 @@ main {
                 .button {
                     margin-left: 1rem;
                     margin-top: 1rem;
+                    @media (min-width: $tablet) {
+                        margin-top: 2rem;
+                        margin-bottom: 1rem;
+                    }
                 }
             }
         }
     }
 }
 
-
+.halves {
+    .container {
+        .half {
+            .text {
+                &.circular {
+                    @media (min-width: $large) {
+                        max-width: 420px;
+                    }
+                }
+            }
+        }
+    }
+}
 
 .services {
     padding: 1.5rem 0;  
@@ -916,6 +936,9 @@ main {
                         }
                         .desc {
                             opacity: 1;
+                            .button {
+                                pointer-events: all;
+                            }
                         }
                         h3 {
                             span {
@@ -1035,6 +1058,10 @@ main {
                         margin-left: 1rem;
                         margin-top: 1rem;
                         pointer-events: none;
+                        color: #000833;
+                        @media (min-width: $tablet) {
+                            margin-top: 2rem;
+                        }
                     }
                 }
                 img {

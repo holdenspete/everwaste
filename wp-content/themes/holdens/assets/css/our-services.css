@@ -836,7 +836,7 @@ img {
 @media (min-width: 1100px) {
   .contactFormSec .container .inner .bottom form .submitWrapper p:hover:after {
     transform: skewX(0deg);
-    border-radius: 12px;
+    border-radius: 3px;
   }
 }
 .contactFormSec .container .inner .bottom form .submitWrapper p input {
@@ -856,6 +856,19 @@ img {
   position: absolute;
   z-index: 2;
   right: 100%;
+}
+@media (min-width: 768px) {
+  .contactFormSec .container .inner .bottom .text {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-bottom: 4rem;
+  }
+}
+@media (min-width: 1200px) {
+  .contactFormSec .container .inner .bottom .text {
+    padding-bottom: 2rem;
+  }
 }
 .contactFormSec .container .inner .bottom .text h2 {
   color: #FFEE00;
@@ -1016,7 +1029,6 @@ img {
 @media (min-width: 1100px) {
   .btn.yellow:hover:after, .button.yellow:hover:after {
     transform: skewX(0deg);
-    border-radius: 12px;
   }
 }
 .btn.green, .button.green {
@@ -1044,7 +1056,6 @@ img {
 @media (min-width: 1100px) {
   .btn.green:hover:after, .button.green:hover:after {
     transform: skewX(0deg);
-    border-radius: 12px;
   }
 }
 .btn span, .button span {
@@ -1768,7 +1779,7 @@ main {
 }
 @media (min-width: 768px) {
   .servicesHero .container .videoWrapper .text .shape {
-    border-radius: 2rem;
+    border-radius: 2rem 3.5rem 1rem 2rem;
     transform: skew(-35deg);
   }
 }
@@ -1797,8 +1808,14 @@ main {
 .servicesHero .container .videoWrapper .text .inner h1, .servicesHero .container .videoWrapper .text .inner p {
   margin: 0;
 }
+@media (min-width: 768px) {
+  .servicesHero .container .videoWrapper .text .inner h1 {
+    max-width: 420px;
+  }
+}
 @media (min-width: 1100px) {
   .servicesHero .container .videoWrapper .text .inner h1 {
+    max-width: 450px;
     font-size: 36px;
   }
 }
@@ -1815,6 +1832,11 @@ main {
 @media (min-width: 1100px) {
   .servicesHero .container .videoWrapper .text .inner p {
     max-width: 455px;
+  }
+}
+@media (min-width: 1400px) {
+  .servicesHero .container .videoWrapper .text .inner p {
+    max-width: 555px;
   }
 }
 
@@ -1898,7 +1920,7 @@ main {
 }
 @media (min-width: 1100px) {
   .rootedServices .container .text .inner {
-    max-width: 500px;
+    max-width: 531px;
   }
 }
 @media (min-width: 768px) {
@@ -2203,7 +2225,7 @@ main {
 }
 @media (min-width: 1100px) {
   .example .container .text .inner {
-    max-width: 500px;
+    max-width: 525px;
   }
 }
 @media (min-width: 768px) {

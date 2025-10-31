@@ -100,7 +100,10 @@ footer {
                         justify-content: space-between;
                     }
                     @media (min-width: $large) {
-                        max-width: 570px;
+                        max-width: 636px;
+                    }
+                    @media (min-width: $xlarge) {
+                        
                     }
                     li {
                         font-weight: 400;

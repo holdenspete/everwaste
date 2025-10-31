@@ -20,7 +20,7 @@ main {
             padding-right: 1rem;
         }
         @media (min-width: $xxlarge) {
-            grid-template-columns: auto 60%;
+            grid-template-columns: 45% 60%;
         }
         
         .imageWrapper {
@@ -64,6 +64,9 @@ main {
            
         }
         .imageWrapper {
+            @media (min-width: $xxlarge) {
+                margin-left: -5%;
+            }
             .inner {
                 &.maskBottomLeft {
                     @media (min-width: $tablet) {
@@ -134,7 +137,7 @@ main {
         .text {
             .inner {
                 @media (min-width: $large) {
-                    max-width: 600px;
+                    max-width: 538px;
                 }
                 h2 {
                     strong {
@@ -224,6 +227,10 @@ main {
                 // @media (min-width: $large) {
                 //     max-width: 500px;
                 // }
+                @media (min-width: $xxlarge) {
+                    min-width: 117%;
+                    max-width: 650px;
+                }
                 h2 {
                     @media (min-width: $xlarge) {
                         margin-top: 3rem;
@@ -323,9 +330,9 @@ main {
         }
         .text {
             .inner {
-                // @media (min-width: $large) {
-                //     max-width: 600px;
-                // }
+                @media (min-width: $large) {
+                    max-width: 526px;
+                }
                 h2 {
                     strong {
                         color: $yellow;
@@ -411,9 +418,10 @@ main {
         .text {
             position: relative;
             .inner {
-                // @media (min-width: $large) {
-                //     max-width: 500px;
-                // }
+                @media (min-width: $large) {
+                    max-width: 600px;
+                    width: 110%;
+                }
                 h2 {
                     strong {
                         color: $yellow;

@@ -217,7 +217,7 @@ get_header(); ?>
 <section class="halves">
     <div class="container">
         <div class="half onScreen">
-            <div class="text">
+            <div class="text circular">
                 <?php the_field('circular_title'); ?>
                 <?php the_field('circular_description'); ?>
             </div>
