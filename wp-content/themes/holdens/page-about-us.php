@@ -119,6 +119,22 @@ get_header(); ?>
     </div>
 </section>
 
+<section class="accreds">
+    <div class="container">
+        <div class="title">
+            <h2>Our accreditations.</h2>
+        </div>
+        <div class="logos">
+            <div class="logo onScreen">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/SafeContractor-colour.png" alt="Alcumus Safe Contractor">
+            </div>
+            <div class="logo onScreen">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/CIWM.jpg" alt="CIWM Affiliate Organisation 2024">
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="halves">
     <div class="container">
         <div class="half onScreen">
@@ -143,6 +159,15 @@ get_header(); ?>
 </section>
 
 <?php include 'contactForm.php'; ?>
+
+<section class="map">
+    <div class="container">        
+        <div class="titleWrapper">
+            <h3><strong>Our locations.</strong></h3>
+        </div>
+        <?php include 'map.php'; ?>
+    </div>
+</section>
 
 <script type="text/javascript" src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>

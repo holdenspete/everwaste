@@ -140,6 +140,22 @@ if($section_4_image): ?>
     </div>
 </section>
 
+<section class="accreds">
+    <div class="container">
+        <div class="title">
+            <h2>Our accreditations.</h2>
+        </div>
+        <div class="logos">
+            <div class="logo onScreen">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/SafeContractor-colour.png" alt="Alcumus Safe Contractor">
+            </div>
+            <div class="logo onScreen">
+                <img src="<?php echo get_template_directory_uri(); ?>/assets/images/CIWM.jpg" alt="CIWM Affiliate Organisation 2024">
+            </div>
+        </div>
+    </div>
+</section>
+
 <section class="map">
     <div class="container">
         <?php if (is_page(12)) { ?>

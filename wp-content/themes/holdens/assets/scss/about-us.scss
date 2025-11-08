@@ -259,6 +259,9 @@ main {
         }
     }
 }
+.accreds {
+    margin-bottom: 1.5rem;
+}
 
 .aboutCommitted {
     padding: 1.5rem 0;
@@ -330,6 +333,10 @@ main {
         }
         .text {
             .inner {
+                @media (min-width: $tablet) {
+                    padding-top: 1rem;
+                    padding-bottom: 1rem;
+                }
                 @media (min-width: $large) {
                     max-width: 526px;
                 }
